@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include '../soutenance/app/commun/fonction.php';
+include 'app/commun/fonctions.php';
 
 $_SESSION['inscription-erreurs'] = [];
 
@@ -88,7 +88,7 @@ $donnees["dg"] = "dg";
 
 
 if (empty($erreurs)) {
-    $db = connect_db();
+    $db = connexion_db();
 
     // Ecriture de la requête
     $requette = 'INSERT INTO utilisateur (nom, prenom, email, nom_utilisateur, profile, mot_passe) VALUES (:nom, :prenom, :email, :nom_utilisateur, :dg, :mot_passe);';
@@ -119,10 +119,10 @@ if (empty($erreurs)) {
         }
 
         $objet = 'Validation de votre inscription';
-        $message = buffer_html_file("../soutenance/app/dg/inscription/message_mail.php");
+        $message = buffer_html_file("..<?= MYPROJECT ?>app/dg/inscription/message_mail.php");
         if (email($donnees["email"], $objet, $message)){
             $_SESSION['validation'] = "Veuiller bien consulter votre adresse mail pour valider votre compte ";
-            header('location: /soutenance/dg/inscription');
+            header('location:'.MYPROJECT.'dg/inscription');
         } else {
             die ("Non envoyé");
         }
@@ -132,7 +132,7 @@ if (empty($erreurs)) {
 } else {
     $_SESSION['inscription-erreurs'] = $erreurs;
 
-    header('location: /soutenance/dg/inscription/');
+    header('location:'.MYPROJECT.'dg/inscription/');
 }
 
 

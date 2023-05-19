@@ -1,10 +1,10 @@
 <?php
 require 'vendor/autoload.php';
 
-define( 'MYPROJECT', '');
-define( 'DATABASE_HOST', '');
-define( 'DATABASE_NAME', '');
-define( 'DATABASE_USERNAME', '');
+define( 'MYPROJECT', '/soutenance/');
+define( 'DATABASE_HOST', 'localhost');
+define( 'DATABASE_NAME', 'salle_de_spectacle');
+define( 'DATABASE_USERNAME', 'root');
 define( 'DATABASE_PASSWORD', '');
 define( 'MAIL_ADDRESS', '');
 define( 'MAIL_PASSWORD', '');

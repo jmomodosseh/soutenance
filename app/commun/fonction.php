@@ -23,6 +23,60 @@ function connect_db()
     return $db;
 }
 
+/**
+ * Send mail.
+ *
+ * @param string $destination The destination.
+ * @param string $subject The subject.
+ * @param string $body The body.
+ * @return bool The result.
+ */
+function email(string $destination, string $subject, string $body): bool
+{
+    // passing true in constructor enables exceptions in PHPMailer
+    $mail = new PHPMailer(true);
+    $mail->CharSet = "UTF-8";
+
+    try {
+
+        // Server settings
+        // for detailed debug output
+        // $mail->SMTPDebug = SMTP::DEBUG_SERVER;
+        $mail->SMTPDebug = 0;
+        $mail->isSMTP();
+        $mail->Host = 'smtp.gmail.com';
+        $mail->SMTPAuth = true;
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+        $mail->Port = 587;
+
+        $mail->SMTPOptions = array(
+            'ssl' => array(
+                'verify_peer' => false,
+                'verify_peer_name' => false,
+                'allow_self_signed' => true,
+            )
+        );
+
+        $mail->Username = 'abdousabourdidrissou@gmail.com';
+        $mail->Password = 'runoumrlzgesohas';
+
+        // Sender and recipient settings
+        $mail->setFrom('abdousabourdidrissou@gmail.com', htmlspecialchars_decode('Gestion_Ecole'));
+        $mail->addAddress($destination, 'UTILISATEUR');
+        $mail->addReplyTo('abdousabourdidrissou@gmail.com', htmlspecialchars_decode('Gestion_Ecole'));
+
+        // Setting the email content
+        $mail->IsHTML(true);
+        $mail->Subject = htmlspecialchars_decode($subject);
+        $mail->Body = $body;
+
+        return $mail->send();
+    } catch (Exception $e) {
+
+        return false;
+    }
+}
+
 
 /**
  * Cette fonction permet de verifier si un utilisateur dans la base de donnée ne possède pas cette adresse mail.
@@ -85,64 +139,6 @@ function check_user_name_exist_in_db(string $nom_utilisateur)
     }
 
     return $check;
-}
-
-
-
-
-
-/**
- * Send mail.
- *
- * @param string $destination The destination.
- * @param string $subject The subject.
- * @param string $body The body.
- * @return bool The result.
- */
-function email(string $destination, string $subject, string $body): bool
-{
-    // passing true in constructor enables exceptions in PHPMailer
-    $mail = new PHPMailer(true);
-    $mail->CharSet = "UTF-8";
-
-    try {
-
-        // Server settings
-        // for detailed debug output
-        // $mail->SMTPDebug = SMTP::DEBUG_SERVER;
-        $mail->SMTPDebug = 0;
-        $mail->isSMTP();
-        $mail->Host = 'smtp.gmail.com';
-        $mail->SMTPAuth = true;
-        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-        $mail->Port = 587;
-
-        $mail->SMTPOptions = array(
-            'ssl' => array(
-                'verify_peer' => false,
-                'verify_peer_name' => false,
-                'allow_self_signed' => true,
-            )
-        );
-
-        $mail->Username = 'abdousabourdidrissou@gmail.com';
-        $mail->Password = 'runoumrlzgesohas';
-
-        // Sender and recipient settings
-        $mail->setFrom('abdousabourdidrissou@gmail.com', htmlspecialchars_decode('Gestion_Ecole'));
-        $mail->addAddress($destination, 'UTILISATEUR');
-        $mail->addReplyTo('abdousabourdidrissou@gmail.com', htmlspecialchars_decode('Gestion_Ecole'));
-
-        // Setting the email content
-        $mail->IsHTML(true);
-        $mail->Subject = htmlspecialchars_decode($subject);
-        $mail->Body = $body;
-
-        return $mail->send();
-    } catch (Exception $e) {
-
-        return false;
-    }
 }
 
 // Exemple de fonction pour récupérer du html dans le buffer

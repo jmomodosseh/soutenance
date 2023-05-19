@@ -10,24 +10,24 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="/Soutenance/public/images/favicon.png" rel="icon">
-  <link href="/Soutenance/public/images/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="<?= MYPROJECT ?>public/images/favicon.png" rel="icon">
+  <link href="<?= MYPROJECT ?>public/images/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.gstatic.com" rel="preconnect">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="/Soutenance/public/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="/Soutenance/public/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="/Soutenance/public/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="/Soutenance/public/vendor/quill/quill.snow.css" rel="stylesheet">
-  <link href="/Soutenance/public/vendor/quill/quill.bubble.css" rel="stylesheet">
-  <link href="/Soutenance/public/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="/Soutenance/public/vendor/simple-datatables/style.css" rel="stylesheet">
+  <link href="<?= MYPROJECT ?>public/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="<?= MYPROJECT ?>public/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="<?= MYPROJECT ?>public/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="<?= MYPROJECT ?>public/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="<?= MYPROJECT ?>public/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="<?= MYPROJECT ?>public/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="<?= MYPROJECT ?>public/vendor/simple-datatables/style.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="/Soutenance/public/css/style.css" rel="stylesheet">
+  <link href="<?= MYPROJECT ?>public/css/style.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: NiceAdmin - v2.5.0
@@ -49,7 +49,7 @@
 
               <div class="d-flex justify-content-center py-4">
                 <a href="index.html" class="logo d-flex align-items-center w-auto">
-                  <img src="/Soutenance/public/images/logo.png" alt="">
+                  <img src="<?= MYPROJECT ?>public/images/logo.png" alt="">
                   <span class="d-none d-lg-block">Spect+</span>
                 </a>
               </div><!-- End Logo -->
@@ -173,7 +173,7 @@
                       <button class="btn btn-primary w-100" type="submit">Créer un compte</button>
                     </div>
                     <div class="col-12">
-                      <p class="small mb-0">Vous avez déja un compte? <a href="/Soutenance/app/Directeur/connexion/index.php">Se connecter</a></p>
+                      <p class="small mb-0">Vous avez déja un compte? <a href="<?= MYPROJECT ?>app/Directeur/connexion/index.php">Se connecter</a></p>
                     </div>
                   </form>
 
@@ -200,17 +200,17 @@
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="/Soutenance/public/vendor/apexcharts/apexcharts.min.js"></script>
-  <script src="/Soutenance/public/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="/Soutenance/public/vendor/chart.js/chart.umd.js"></script>
-  <script src="/Soutenance/public/vendor/echarts/echarts.min.js"></script>
-  <script src="/Soutenance/public/vendor/quill/quill.min.js"></script>
-  <script src="/Soutenance/public/vendor/simple-datatables/simple-datatables.js"></script>
-  <script src="/Soutenance/public/vendor/tinymce/tinymce.min.js"></script>
-  <script src="/Soutenance/public/vendor/php-email-form/validate.js"></script>
+  <script src="<?= MYPROJECT ?>public/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="<?= MYPROJECT ?>public/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="<?= MYPROJECT ?>public/vendor/chart.js/chart.umd.js"></script>
+  <script src="<?= MYPROJECT ?>public/vendor/echarts/echarts.min.js"></script>
+  <script src="<?= MYPROJECT ?>public/vendor/quill/quill.min.js"></script>
+  <script src="<?= MYPROJECT ?>public/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="<?= MYPROJECT ?>public/vendor/tinymce/tinymce.min.js"></script>
+  <script src="<?= MYPROJECT ?>public/vendor/php-email-form/validate.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="/Soutenance/public/js/main.js"></script>
+  <script src="<?= MYPROJECT ?>public/js/main.js"></script>
 
 </body>
 
