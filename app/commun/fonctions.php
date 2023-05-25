@@ -79,7 +79,7 @@ function check_email_exist_in_db(string $email)
 
     $check = false;
 
-    $db = connect_db();
+    $db = connexion_db();
 
     $requette = "SELECT count(*) as nbr_utilisateur FROM utilisateur WHERE email = :email";
 
@@ -111,7 +111,7 @@ function check_user_name_exist_in_db(string $nom_utilisateur)
 
     $check = false;
 
-    $db = connect_db();
+    $db = connexion_db();
 
     $requette = "SELECT count(*) as nbr_utilisateur FROM utilisateur WHERE nom_utilisateur = :nom_utilisateur";
 
@@ -152,7 +152,7 @@ function insertion_token(int $user_id, string $type, string $token): bool
 
     $insertion_token = false;
 
-    $database = connect_db();
+    $database = connexion_db();
 
     $request = "INSERT INTO token (user_id, type, token) VALUES (:user_id, :type, :token)";
 
@@ -181,7 +181,7 @@ function recuperer_token(string $user_id)
 
     $token = [];
 
-    $database = connect_db();
+    $database = connexion_db();
 
     $request = "SELECT token FROM token WHERE user_id=:user_id";
 
@@ -210,7 +210,7 @@ function select_user_id(string $email)
 
     $user_id = [];
 
-    $database = connect_db();
+    $database = connexion_db();
 
     $request = "SELECT id FROM utilisateur WHERE email=:email";
 
@@ -244,7 +244,7 @@ function check_id_utilisateur_exist_in_db(int $user_id, string $token, string $t
 
     $check = false;
 
-    $db = connect_db();
+    $db = connexion_db();
 
     $requette = "SELECT * FROM token WHERE user_id = :user_id and token= :token and type= :type and est_actif= :est_actif and $est_supprimer= :est_supprimer";
 
@@ -281,7 +281,7 @@ function maj(int $id_utilisateur): bool
 
     $date=date("Y-m-d H:i:s");
 
-    $db = connect_db();
+    $db = connexion_db();
 
     $request = "UPDATE token SET est_actif = :est_actif, est_supprimer = :est_supprimer, maj_le = :maj_le WHERE user_id= :id_utilisateur";
 
@@ -314,7 +314,7 @@ function maj1(int $id_utilisateur): bool
 
     $date=date("Y-m-d H:i:s");
 
-    $db = connect_db();
+    $db = connexion_db();
 
     $request = "UPDATE utilisateur SET est_actif = :est_actif, maj_le = :maj_le WHERE id= :id_utilisateur";
 
@@ -351,7 +351,7 @@ function check_if_user_exist(string $email_user_name, string $mot_passe, string 
 {
     $user = false;
 
-    $db = connect_db();
+    $db = connexion_db();
 
     $requette = "SELECT id, nom, prenom, email, nom_utilisateur, avatar, profile FROM utilisateur WHERE (email =:email_user_name OR nom_utilisateur =:email_user_name) and profile = :profile and mot_passe = :mot_passe and est_actif= :est_actif and est_supprimer= :est_supprimer" ;
 
@@ -406,7 +406,7 @@ function maj3(string $email, string $password): bool
 
     $date=date("Y-m-d H:i:s");
 
-    $db = connect_db();
+    $db = connexion_db();
 
     $request = "UPDATE utilisateur SET mot_passe = :mot_passe, maj_le = :maj_le  WHERE email= :email";
 

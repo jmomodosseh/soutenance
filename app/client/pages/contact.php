@@ -51,20 +51,20 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="Accueil.html" class="nav-item nav-link">Accueil</a>
-                <a href="actualités.html" class="nav-item nav-link active">Actualitées</a>
-                <a href="A propos.html" class="nav-item nav-link">A propos</a>
+                <a href="accueil" class="nav-item nav-link">Accueil</a>
+                <a href="actualites" class="nav-item nav-link active">Actualites</a>
+                <a href="a-propos" class="nav-item nav-link">A propos</a>
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Nos salles</a>
                     <div class="dropdown-menu fade-down m-0">
-                        <a href="Cotonou.html" class="dropdown-item">Cotonou</a>
-                        <a href="Grand Popo.html" class="dropdown-item">Grand Popo</a>
-                        <a href="Parakou.html" class="dropdown-item">Parakou</a>
+                        <a href="Cotonou" class="dropdown-item">Cotonou</a>
+                        <a href="Grand-Popo" class="dropdown-item">Grand Popo</a>
+                        <a href="Parakou" class="dropdown-item">Parakou</a>
                     </div>
                 </div>
-                <a href="contact.html" class="nav-item nav-link active">Contact</a>
+                <a href="contact" class="nav-item nav-link active">Contact</a>
             </div>
-            <a href="" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Reserver<i class="fa fa-arrow-right ms-3"></i></a>
+            <a href="reservation" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Reserver<i class="fa fa-arrow-right ms-3"></i></a>
         </div>
     </nav>
     <!-- Navbar End -->
@@ -94,20 +94,19 @@
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center text-primary px-3">Contact Us</h6>
-                <h1 class="mb-5">Contact For Any Query</h1>
+                <h4 class="section-title bg-white text-center text-primary px-3">Nous Contacter</h4>
+                <h1 class="mb-5"></h1>
             </div>
             <div class="row g-4">
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <h5>Get In Touch</h5>
-                    <p class="mb-4">The contact form is currently inactive. Get a functional and working contact form with Ajax & PHP in a few minutes. Just copy and paste the files, add a little code and you're done. <a href="https://htmlcodex.com/contact-form">Download Now</a>.</p>
+                  
                     <div class="d-flex align-items-center mb-3">
                         <div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary" style="width: 50px; height: 50px;">
                             <i class="fa fa-map-marker-alt text-white"></i>
                         </div>
                         <div class="ms-3">
-                            <h5 class="text-primary">Office</h5>
-                            <p class="mb-0">123 Street, New York, USA</p>
+                            <h5 class="text-primary">Siège</h5>
+                            <p class="mb-0">Cotnou/Benin</p>
                         </div>
                     </div>
                     <div class="d-flex align-items-center mb-3">
@@ -115,8 +114,8 @@
                             <i class="fa fa-phone-alt text-white"></i>
                         </div>
                         <div class="ms-3">
-                            <h5 class="text-primary">Mobile</h5>
-                            <p class="mb-0">+012 345 67890</p>
+                            <h5 class="text-primary">Telephone</h5>
+                            <p class="mb-0">+229 99337363</p>
                         </div>
                     </div>
                     <div class="d-flex align-items-center">
@@ -125,7 +124,7 @@
                         </div>
                         <div class="ms-3">
                             <h5 class="text-primary">Email</h5>
-                            <p class="mb-0">info@example.com</p>
+                            <p class="mb-0">madisonjdoss954@gmail.com</p>
                         </div>
                     </div>
                 </div>
@@ -136,19 +135,19 @@
                             <div class="col-md-6">
                                 <div class="form-floating">
                                     <input type="text" class="form-control" id="name" placeholder="Your Name">
-                                    <label for="name">Your Name</label>
+                                    <label for="name">Nom</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
                                     <input type="email" class="form-control" id="email" placeholder="Your Email">
-                                    <label for="email">Your Email</label>
+                                    <label for="email">Email</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
                                     <input type="text" class="form-control" id="subject" placeholder="Subject">
-                                    <label for="subject">Subject</label>
+                                    <label for="subject">Motif</label>
                                 </div>
                             </div>
                             <div class="col-12">
@@ -158,7 +157,7 @@
                                 </div>
                             </div>
                             <div class="col-12">
-                                <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
+                                <button class="btn btn-primary w-100 py-3" type="submit">envoyer</button>
                             </div>
                         </div>
                     </form>
@@ -172,13 +171,13 @@
     <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
-                <div class="col-lg-3 col-md-6">
+            <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-3">Accès rapide</h4>
-                    <a class="btn btn-link" href="../landing/Accueil.html">Accueil</a>
-                    <a class="btn btn-link" href="../landing/actualités.html">actualités</a>
-                    <a class="btn btn-link" href="../landing/A propos.html">A propos</a>
-                    <a class="btn btn-link" href="../app/Client/inscription/index.php">S'inscrire</a>
-                    <a class="btn btn-link" href="../app/Client/connexion/index.php">Se connecter</a>
+                    <a class="btn btn-link" href="../pages/accueil">Accueil</a>
+                    <a class="btn btn-link" href="../pages/actualites">actualites</a>
+                    <a class="btn btn-link" href="../pages/a-propos">A propos</a>
+                    <a class="btn btn-link" href="../inscription/index">S'inscrire</a>
+                    <a class="btn btn-link" href="../connexion/index">Se connecter</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-3">Contact</h4>

@@ -1,3 +1,20 @@
+<?php
+session_start();
+
+include './app/commun/fonctions.php';
+
+if (isset($_SESSION['inscription_erreurs'])&& !empty($_SESSION['inscription_erreurs'])) {
+  $erreurs = $_SESSION['inscription_erreurs'];
+}
+
+if (isset($_SESSION['donnees_utilisateur']) && !empty($_SESSION['donnees_utilisateur'])) {
+ $donnees = $_SESSION['donnees_utlilisateur'];
+}
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -49,7 +66,7 @@
 
               <div class="d-flex justify-content-center py-4">
                 <a href="index.html" class="logo d-flex align-items-center w-auto">
-                  <img src="<?= MYPROJECT ?>public/images/logo.png" alt="">
+                  <img src="<?= MYPROJECT ?>public/images/.png" alt="">
                   <span class="d-none d-lg-block">Spect+</span>
                 </a>
               </div><!-- End Logo -->
@@ -87,15 +104,15 @@
                     <label for="inscription-nom">Prénom:
                                     <span class="text-danger">(*)</span>
                                 </label>
-                                <input type="text" name="Prénom" id="inscription-Prénom" class="form-control" placeholder="Prénom" value="<?php if (isset($donnees["nom"]) && !empty($donnees["nom"])) {
-                                                                                                                                                            echo $donnees["nom"];
+                                <input type="text" name="prenoms" id="inscription-prenoms" class="form-control" placeholder="Prénoms" value="<?php if (isset($donnees["prenoms"]) && !empty($donnees["nom"])) {
+                                                                                                                                                            echo $donnees["prenoms"];
                                                                                                                                                         } else {
                                                                                                                                                             echo '';
                                                                                                                                                         } ?>">
                                 <span class="text-danger">
                                     <?php
-                                    if (isset($erreurs["nom"]) && !empty($erreurs["nom"])) {
-                                        echo $erreurs["nom"];
+                                    if (isset($erreurs["prenoms"]) && !empty($erreurs["prenoms"])) {
+                                        echo $erreurs["prenoms"];
                                     }
                                     ?>
                                 </span>
@@ -106,7 +123,7 @@
                                 <label for="inscription-email">Email:
                                     <span class="text-danger">(*)</span>
                                 </label>
-                                <input type="email" name="email" id="inscription-email" class="form-control" placeholder=" Entrez un email valide" value="<?php if (isset($donnees["email"]) && !empty($donnees["email"])) {
+                                <input type="email" name="email" id="inscription-email" class="form-control" placeholder=" Email valide" value="<?php if (isset($donnees["email"]) && !empty($donnees["email"])) {
                                                                                                                                                                             echo $donnees["email"];
                                                                                                                                                                         } else {
                                                                                                                                                                             echo '';
@@ -124,54 +141,54 @@
                     </div>
 
                    <div class="form-group">
-                                <label for="inscription-nom-utilisateur">Nom d'utilisateur:
+                                <label for="inscription-username">Nom d'utilisateur:
                                     <span class="text-danger">(*)</span>
                                 </label>
-                                <input type="text" name="nom-utilisateur" id="inscription-nom-utilisateur" class="form-control" placeholder=" Nom d'utilisateur" value="<?php if (isset($donnees["nom-utilisateur"]) && !empty($donnees["nom-utilisateur"])) {
-                                                                                                                                                                                                    echo $donnees["nom-utilisateur"];
+                                <input type="text" name="username" id="inscription-username" class="form-control" placeholder="Nom utilisateur" value="<?php if (isset($donnees["username"]) && !empty($donnees["username"])) {
+                                                                                                                                                                                                    echo $donnees["username"];
                                                                                                                                                                                                 } else {
                                                                                                                                                                                                     echo '';
                                                                                                                                                                                                 } ?>">
                                 <span class="text-danger">
                                     <?php
-                                    if (isset($erreurs["nom-utilisateur"]) && !empty($erreurs["nom-utilisateur"])) {
-                                        echo $erreurs["nom-utilisateur"];
+                                    if (isset($erreurs["username"]) && !empty($erreurs["username"])) {
+                                        echo $erreurs["username"];
                                     }
                                     ?>
                                 </span>
                             </div>
                             <div class="form-group">
-                                <label for="inscription-mot-passe">Mot de passe:
+                                <label for="inscription-password">Mot de passe:
                                     <span class="text-danger">(*)</span>
                                 </label>
-                                <input type="password" name="mot-passe" id="inscription-mot-passe" class="form-control" placeholder="   Mot de passe" value="<?php if (isset($donnees["mot-passe"]) && !empty($donnees["mot-passe"])) {
-                                                                                                                                                                                    echo $donnees["mot-passe"];
+                                <input type="password" name="password" id="inscription-password" class="form-control" placeholder="  Mot de passe" value="<?php if (isset($donnees["password"]) && !empty($donnees["password"])) {
+                                                                                                                                                                                    echo $donnees["password"];
                                                                                                                                                                                 } else {
                                                                                                                                                                                     echo '';
                                                                                                                                                                                 } ?>">
                                 <span class="text-danger">
                                     <?php
-                                    if (isset($erreurs["mot-passe"]) && !empty($erreurs["mot-passe"])) {
-                                        echo $erreurs["mot-passe"];
+                                    if (isset($erreurs["password"]) && !empty($erreurs["password"])) {
+                                        echo $erreurs["password"];
                                     }
                                     ?>
                                 </span>
                             </div>
 
                             <div class="form-group">
-                                <label for="inscription-retapez-mot-passe">Retaper mot de passe:
+                                <label for="inscription-retapez-password">Retaper mot de passe:
                                     <span class="text-danger">(*)</span>
                                 </label>
-                                <input type="password" name="retapez-mot-passe" id="inscription-retapez-mot-passe" class="form-control" placeholder=" Confirmer mot de passe" value="<?php if (isset($donnees["retapez-mot-passe"]) && !empty($donnees["retapez-mot-passe"])) {
-                                                                                                                                                                                                        echo $donnees["retapez-mot-passe"];
+                                <input type="password" name="retapez-password" id="inscription-retapez-password" class="form-control" placeholder=" Confirmer mot de passe" value="<?php if (isset($donnees["retapez-password"]) && !empty($donnees["retapez-password"])) {
+                                                                                                                                                                                                        echo $donnees["retapez-password"];
                                                                                                                                                                                                     } else {
                                                                                                                                                                                                         echo '';
                                                                                                                                                                                                     } ?>">
 
                                 <span class="text-danger">
                                     <?php
-                                    if (isset($erreurs["retapez-mot-passe"]) && !empty($erreurs["retapez-mot-passe"])) {
-                                        echo $erreurs["retapez-mot-passe"];
+                                    if (isset($erreurs["retapez-password"]) && !empty($erreurs["retapez-password"])) {
+                                        echo $erreurs["retapez-password"];
                                     }
                                     ?>
                                 </span>

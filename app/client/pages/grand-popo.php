@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -51,20 +51,20 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="Accueil.html" class="nav-item nav-link">Accueil</a>
-                <a href="actualités.html" class="nav-item nav-link active">Actualitées</a>
-                <a href="A propos.html" class="nav-item nav-link">A propos</a>
+                <a href="accueil" class="nav-item nav-link">Accueil</a>
+                <a href="actualites" class="nav-item nav-link active">Actualites</a>
+                <a href="a-propos" class="nav-item nav-link">A propos</a>
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Nos salles</a>
                     <div class="dropdown-menu fade-down m-0">
-                        <a href="Cotonou.html" class="dropdown-item">Cotonou</a>
-                        <a href="Grand Popo.html" class="dropdown-item">Grand Popo</a>
-                        <a href="Parakou.html" class="dropdown-item">Parakou</a>
+                        <a href="Cotonou" class="dropdown-item">Cotonou</a>
+                        <a href="Grand-Popo" class="dropdown-item">Grand Popo</a>
+                        <a href="Parakou" class="dropdown-item">Parakou</a>
                     </div>
                 </div>
-                <a href="contact.html" class="nav-item nav-link">Contact</a>
+                <a href="contact" class="nav-item nav-link">Contact</a>
             </div>
-            <a href="" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Reserver<i class="fa fa-arrow-right ms-3"></i></a>
+            <a href="reservation" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Reserver<i class="fa fa-arrow-right ms-3"></i></a>
         </div>
     </nav>
     <!-- Navbar End -->
@@ -75,12 +75,12 @@
         <div class="container py-5">
             <div class="row justify-content-center">
                 <div class="col-lg-10 text-center">
-                    <h1 class="display-3 text-white animated slideInDown">Grand Popo</h1>
+                    <h1 class="display-3 text-white animated slideInDown">Grand-popo</h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb justify-content-center">
                             <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
                             <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
-                            <li class="breadcrumb-item text-white active" aria-current="page">Testimonial</li>
+                            <li class="breadcrumb-item text-white active" aria-current="page">Courses</li>
                         </ol>
                     </nav>
                 </div>
@@ -90,44 +90,182 @@
     <!-- Header End -->
 
 
+   
+
+    <!-- Courses Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3">Programme</h6>
+                <h1 class="mb-5">A venir pour cette semaine</h1>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="course-item bg-light">
+                        <div class="position-relative overflow-hidden">
+                            <img class="img-fluid" src="<?= MYPROJECT ?>public/images/legend of seeker.jpg" alt="">
+                           
+                        </div>
+                        <div class="text-center p-4 pb-0">
+                            <h3 class="mb-0">2000F</h3>
+                           
+                            <h5 class="mb-4">Legend of Seeker</h5>
+                        </div>
+                        <div class="d-flex border-top">
+                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-user-tie text-primary me-2"></i>John Doe</small>
+                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-clock text-primary me-2"></i>3.445 pm</small>
+                            <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i>Grand-popo</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="course-item bg-light">
+                        <div class="position-relative overflow-hidden">
+                            <img class="img-fluid" src="<?= MYPROJECT ?>public/images/sans titre.jpg" alt="">
+                           
+                        </div>
+                        <div class="text-center p-4 pb-0">
+                            <h3 class="mb-0">1500F</h3>
+                           
+                            <h5 class="mb-4">Chainsaw Man</h5>
+                        </div>
+                        <div class="d-flex border-top">
+                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-user-tie text-primary me-2"></i>John Doe</small>
+                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-clock text-primary me-2"></i>8.30 pm</small>
+                            <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i>Grand-popo</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="course-item bg-light">
+                        <div class="position-relative overflow-hidden">
+                            <img class="img-fluid" src="<?= MYPROJECT ?>public/images/murder.jpg" alt="">
+                           
+                        </div>
+                        <div class="text-center p-4 pb-0">
+                            <h3 class="mb-0">3000F </h3>
+                            
+                            <h5 class="mb-4">Murder</h5>
+                        </div>
+                        <div class="d-flex border-top">
+                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-user-tie text-primary me-2"></i>Analis</small>
+                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-clock text-primary me-2"></i>2.30 pm</small>
+                            <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i>Grand-popo</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Courses End -->
+
+
+
+      <!-- Courses Start -->
+      <div class="container-xxl py-5">
+        <div class="container">
+           
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="course-item bg-light">
+                        <div class="position-relative overflow-hidden">
+                            <img class="img-fluid" src="<?= MYPROJECT ?>public/images/legacie.jpg" alt="">
+                           
+                        </div>
+                        <div class="text-center p-4 pb-0">
+                            <h3 class="mb-0">3000F</h3>
+                           
+                            
+                            <h5 class="mb-4">Legacies</h5>
+                        </div>
+                        <div class="d-flex border-top">
+                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-user-tie text-primary me-2"></i>KLAUS</small>
+                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-clock text-primary me-2"></i>5.20 pm</small>
+                            <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i>Grand-popo</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="course-item bg-light">
+                        <div class="position-relative overflow-hidden">
+                            <img class="img-fluid" src="<?= MYPROJECT ?>public/images/sleepy hollow.jpg" alt="">
+                           
+                        </div>
+                        <div class="text-center p-4 pb-0">
+                            <h3 class="mb-0">2000F</h3>
+                          
+                            <h5 class="mb-4">Sleepy hollow </h5>
+                        </div>
+                        <div class="d-flex border-top">
+                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-user-tie text-primary me-2"></i>Cavalier sans tête</small>
+                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-clock text-primary me-2"></i>1.45 pm</small>
+                            <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i>Grand-popo</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="course-item bg-light">
+                        <div class="position-relative overflow-hidden">
+                            <img class="img-fluid" src="<?= MYPROJECT ?>public/images/ciné.jpg" alt="">
+                            
+                        </div>
+                        <div class="text-center p-4 pb-0">
+                            <h3 class="mb-0">2000F</h3>
+                          
+                            <h5 class="mb-4">Ciné</h5>
+                        </div>
+                        <div class="d-flex border-top">
+                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-user-tie text-primary me-2"></i>John Doe</small>
+                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-clock text-primary me-2"></i>1.49 pm</small>
+                            <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i>Cotonou</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Courses End -->
+
+
+
     <!-- Testimonial Start -->
     <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container">
             <div class="text-center">
-                <h6 class="section-title bg-white text-center text-primary px-3">Testimonial</h6>
-                <h1 class="mb-5">Our Students Say!</h1>
+                <h6 class="section-title bg-white text-center text-primary px-3">Avis divers</h6>
+                <h1 class="mb-5">Nos clients disent!</h1>
             </div>
             <div class="owl-carousel testimonial-carousel position-relative">
                 <div class="testimonial-item text-center">
                     <img class="border rounded-circle p-2 mx-auto mb-3" src="<?= MYPROJECT ?>public/images/testimonial-1.jpg" style="width: 80px; height: 80px;">
-                    <h5 class="mb-0">Client Name</h5>
-                    <p>Profession</p>
+                    <h5 class="mb-0">Carla</h5>
+                    <p>Manequin</p>
                     <div class="testimonial-text bg-light text-center p-4">
-                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                    <p class="mb-0">juste top</p>
                     </div>
                 </div>
                 <div class="testimonial-item text-center">
                     <img class="border rounded-circle p-2 mx-auto mb-3" src="<?= MYPROJECT ?>public/images/testimonial-2.jpg" style="width: 80px; height: 80px;">
-                    <h5 class="mb-0">Client Name</h5>
-                    <p>Profession</p>
+                    <h5 class="mb-0">Clément</h5>
+                    <p>Proffesseur</p>
                     <div class="testimonial-text bg-light text-center p-4">
-                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                    <p class="mb-0">Trop bien</p>
                     </div>
                 </div>
                 <div class="testimonial-item text-center">
                     <img class="border rounded-circle p-2 mx-auto mb-3" src="<?= MYPROJECT ?>public/images/testimonial-3.jpg" style="width: 80px; height: 80px;">
-                    <h5 class="mb-0">Client Name</h5>
-                    <p>Profession</p>
+                    <h5 class="mb-0">Claver</h5>
+                    <p>Designer</p>
                     <div class="testimonial-text bg-light text-center p-4">
-                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                    <p class="mb-0">magnifique</p>
                     </div>
                 </div>
                 <div class="testimonial-item text-center">
                     <img class="border rounded-circle p-2 mx-auto mb-3" src="<?= MYPROJECT ?>public/images/testimonial-4.jpg" style="width: 80px; height: 80px;">
-                    <h5 class="mb-0">Client Name</h5>
-                    <p>Profession</p>
+                    <h5 class="mb-0">Marlène</h5>
+                    <p>Journaliste</p>
                     <div class="testimonial-text bg-light text-center p-4">
-                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                    <p class="mb-0">facile à utiliser</p>
                     </div>
                 </div>
             </div>
@@ -141,11 +279,11 @@
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-3">Accès rapide</h4>
-                    <a class="btn btn-link" href="../landing/Accueil.html">Accueil</a>
-                    <a class="btn btn-link" href="../landing/actualités.html">actualités</a>
-                    <a class="btn btn-link" href="../landing/A propos.html">A propos</a>
-                    <a class="btn btn-link" href="../app/Client/inscription/index.php">S'inscrire</a>
-                    <a class="btn btn-link" href="../app/Client/connexion/index.php">Se connecter</a>
+                    <a class="btn btn-link" href="../pages/accueil">Accueil</a>
+                    <a class="btn btn-link" href="../pages/actualites">actualites</a>
+                    <a class="btn btn-link" href="../pages/a-propos">A propos</a>
+                    <a class="btn btn-link" href="../inscription/index">S'inscrire</a>
+                    <a class="btn btn-link" href="../connexion/index">Se connecter</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-3">Contact</h4>

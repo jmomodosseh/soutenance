@@ -51,20 +51,20 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="Accueil.html" class="nav-item nav-link active">Accueil</a>
-                <a href="actualités.html" class="nav-item nav-link">Actualitées</a>
-                <a href="A propos.html" class="nav-item nav-link">A propos</a>
+                <a href="accueil" class="nav-item nav-link active">Accueil</a>
+                <a href="actualites" class="nav-item nav-link">Actualites</a>
+                <a href="a-propos" class="nav-item nav-link">A propos</a>
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Nos salles</a>
                     <div class="dropdown-menu fade-down m-0">
-                        <a href="Cotonou.html" class="dropdown-item">Cotonou</a>
-                        <a href="Grand Popo.html" class="dropdown-item">grand Popo</a>
-                        <a href="Parakou.html" class="dropdown-item">Parakou</a>
+                        <a href="Cotonou" class="dropdown-item">Cotonou</a>
+                        <a href="Grand-Popo" class="dropdown-item">grand Popo</a>
+                        <a href="Parakou" class="dropdown-item">Parakou</a>
                     </div>
                 </div>
-                <a href="contact.html" class="nav-item nav-link">Contact</a>
+                <a href="contact" class="nav-item nav-link">Contact</a>
             </div>
-            <a href="" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Reserver<i class="fa fa-arrow-right ms-3"></i></a>
+            <a href="reservation" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Reserver<i class="fa fa-arrow-right ms-3"></i></a>
         </div>
     </nav>
     <!-- Navbar End -->
@@ -80,10 +80,10 @@
                         <div class="row justify-content-start">
                             <div class="col-sm-10 col-lg-8">
                                 <h1 class="text-primary text-uppercase mb-3 animated slideInDown">Spect+</h1>
-                                <h5 class="display-3 text-white animated slideInDown">Best movies platform</h5>
+                                <h5 class="display-3 text-white animated slideInDown">Movies platform</h5>
                                 <p class="fs-5 text-white mb-4 pb-2">Spect+ la plateforme de spectacles qui vous permet d'avoir tous les programmes depuis oû vous vous trouvez!</p>
-                                <a href="../app/Client/inscription/index.php" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">S'inscrire</a>
-                                <a href="../app/Client/connexion/index.php" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Se connecter </a>
+                                <a href="../inscription/index" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">S'inscrire</a>
+                                <a href="../connexion/index" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Se connecter </a>
                             </div>
                         </div>
                     </div>
@@ -96,10 +96,10 @@
                         <div class="row justify-content-start">
                             <div class="col-sm-10 col-lg-8">
                                 <h1 class="text-primary text-uppercase mb-3 animated slideInDown">Spect+</h1>
-                                <h5 class="display-3 text-white animated slideInDown">Best movies platform</h5>
+                                <h5 class="display-3 text-white animated slideInDown">Movies platform</h5>
                                 <p class="fs-5 text-white mb-4 pb-2">Spect+ la plateforme de spectacles qui vous permet d'avoir tous les programmes depuis oû vous vous trouvez!</p>
-                                <a href="../app/Client/inscription/index.php" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">S'inscrire</a>
-                                <a href="../app/Client/connexion/index.php" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Se connecter</a>
+                                <a href="../inscription/index" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">S'inscrire</a>
+                                <a href="../connexion/index" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Se connecter</a>
                             </div>
                         </div>
                     </div>
@@ -161,7 +161,7 @@
                     <div class="position-relative overflow-hidden">
                         <img class="img-fluid" src="<?=MYPROJECT?>public/images/eassai.jpg" alt="">
                         <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
-                            <a href="actualités.html" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Plus savoir </a>
+                            <a href="actualites.html" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Plus savoir </a>
                             <a href="reservation.html" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Reserver</a>
                         </div>
                     </div>
@@ -182,7 +182,7 @@
                     <div class="position-relative overflow-hidden">
                         <img class="img-fluid" src="<?=MYPROJECT?>public/images/essai1.jpg" alt="">
                         <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
-                            <a href="actualités.html" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Plus savoir</a>
+                            <a href="actualites.html" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Plus savoir</a>
                             <a href="reservation.html" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Reserver</a>
                         </div>
                     </div>
@@ -203,7 +203,7 @@
                     <div class="position-relative overflow-hidden">
                         <img class="img-fluid" src="<?=MYPROJECT?>public/images/essai2.jpg" alt="">
                         <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
-                            <a href="actualités.html" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Savoir plus</a>
+                            <a href="actualites.html" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Savoir plus</a>
                             <a href="reservation.html" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Reserver</a>
                         </div>
                     </div>
@@ -279,13 +279,13 @@
     <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
-                <div class="col-lg-3 col-md-6">
+            <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-3">Accès rapide</h4>
-                    <a class="btn btn-link" href="">accueil</a>
-                    <a class="btn btn-link" href="">actualités</a>
-                    <a class="btn btn-link" href="">a-propos</a>
-                    <a class="btn btn-link" href="">S'inscrire</a>
-                    <a class="btn btn-link" href="">Se connecter</a>
+                    <a class="btn btn-link" href="../pages/accueil">Accueil</a>
+                    <a class="btn btn-link" href="../pages/actualites">actualites</a>
+                    <a class="btn btn-link" href="../pages/a-propos">A propos</a>
+                    <a class="btn btn-link" href="../inscription/index">S'inscrire</a>
+                    <a class="btn btn-link" href="../connexion/index">Se connecter</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-3">Contact</h4>

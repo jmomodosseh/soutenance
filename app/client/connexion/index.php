@@ -49,7 +49,7 @@
 
             <div class="d-flex justify-content-center py-4">
                 <a href="index.php" class="logo d-flex align-items-center w-auto">
-                  <img src="<?= MYPROJECT ?>public/images/logo2.png" alt="">
+                  <img src="<?= MYPROJECT ?>public/images/.png" alt="">
                   <span class="d-none d-lg-block">Spect+</span>
                 </a>
               </div><!-- End Logo -->
