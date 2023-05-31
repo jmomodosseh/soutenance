@@ -64,7 +64,7 @@
                 </div>
                 <a href="contact" class="nav-item nav-link">Contact</a>
             </div>
-            <a href="reservation" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Reserver<i class="fa fa-arrow-right ms-3"></i></a>
+            <a href="Espace_pro" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Espace pro<i class="fa fa-arrow-right ms-3"></i></a>
         </div>
     </nav>
     <!-- Navbar End -->
@@ -146,7 +146,7 @@
                            
                         </div>
                         <div class="text-center p-4 pb-0">
-                            Chainsaw Man, un anime ou encore (Manga) est l'histoire d'un informateur japonais qui en dépit de ses principes de dévotion absolue se voit contraint d'enfreindre les règles pour sauver sa famille <br> à suivre absolument !  
+                            Chainsaw Man, un anime ou encore (Manga) est l'histoire d'un jeune gamin qui se trouve à payer les dêtes de ses parents après leur mort et n'étant pas assez âgé pour être embauché se trouve à chasser des démons pour être payer et rembourser les dêtes puis sortir enfin de la précarité  <br> à suivre absolument !  
                             <div class="mb-3">
                               
                             </div>

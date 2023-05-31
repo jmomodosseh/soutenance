@@ -64,7 +64,7 @@
                 </div>
                 <a href="contact" class="nav-item nav-link">Contact</a>
             </div>
-            <a href="reservation" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Reserver<i class="fa fa-arrow-right ms-3"></i></a>
+            <a href="Espace_pro" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Espace pro<i class="fa fa-arrow-right ms-3"></i></a>
         </div>
     </nav>
     <!-- Navbar End -->

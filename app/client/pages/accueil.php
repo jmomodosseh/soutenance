@@ -64,7 +64,7 @@
                 </div>
                 <a href="contact" class="nav-item nav-link">Contact</a>
             </div>
-            <a href="reservation" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Reserver<i class="fa fa-arrow-right ms-3"></i></a>
+            <a href="Espace_pro" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Espace pro<i class="fa fa-arrow-right ms-3"></i></a>
         </div>
     </nav>
     <!-- Navbar End -->
@@ -161,8 +161,8 @@
                     <div class="position-relative overflow-hidden">
                         <img class="img-fluid" src="<?=MYPROJECT?>public/images/eassai.jpg" alt="">
                         <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
-                            <a href="actualites.html" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Plus savoir </a>
-                            <a href="reservation.html" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Reserver</a>
+                            <a href="actualites" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Plus savoir </a>
+                            <a href="espace_pro" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Reserver</a>
                         </div>
                     </div>
                     <div class="text-center p-4 pb-0">
@@ -182,8 +182,8 @@
                     <div class="position-relative overflow-hidden">
                         <img class="img-fluid" src="<?=MYPROJECT?>public/images/essai1.jpg" alt="">
                         <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
-                            <a href="actualites.html" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Plus savoir</a>
-                            <a href="reservation.html" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Reserver</a>
+                            <a href="actualites" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Plus savoir</a>
+                            <a href="espace_pro" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Reserver</a>
                         </div>
                     </div>
                     <div class="text-center p-4 pb-0">
@@ -203,8 +203,8 @@
                     <div class="position-relative overflow-hidden">
                         <img class="img-fluid" src="<?=MYPROJECT?>public/images/essai2.jpg" alt="">
                         <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
-                            <a href="actualites.html" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Savoir plus</a>
-                            <a href="reservation.html" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Reserver</a>
+                            <a href="actualites" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Savoir plus</a>
+                            <a href="espace_pro" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Reserver</a>
                         </div>
                     </div>
                     <div class="text-center p-4 pb-0">
