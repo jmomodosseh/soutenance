@@ -105,8 +105,8 @@
             <li>Communion</li>
             <li>Etc</li></ul><p>Nous vous proposons une assurance et un confort que vous méritez !</p>
             <p>Pour en savoir plus: <a style="text-decoration: underline;" rel="noreferrer noopener" 
-            href="https://www.canalolympia.com/wp-content/uploads/2021/07/responsables-de-salles.pdf"
-             target="_blank">Joindre nos responsables</a></p><div class="msacwl-carousel-wrap msacwl
+            href="acceuil"
+             target="_blank">payer un ticket / Réserver un espace</a></p><div class="msacwl-carousel-wrap msacwl
              -row-clearfix"><div id="msacwl-carousel-1" class="msacwl-carousel msacwl-slider-popup"><div class="msacwl-gallery-carousel slick-initialized 
              slick-slider slick-dotted" role="toolbar"></div></div></div>
     <!-- fin de texte -->
