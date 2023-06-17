@@ -1,7 +1,5 @@
 <?php
-session_start();
-
-include './app/commun/fonctions.php';
+//session_start();
 
 if (isset($_SESSION['inscription_erreurs'])&& !empty($_SESSION['inscription_erreurs'])) {
   $erreurs = $_SESSION['inscription_erreurs'];
@@ -14,6 +12,7 @@ if (isset($_SESSION['donnees_utilisateur']) && !empty($_SESSION['donnees_utilisa
 
 
 
+ 
 
 <!DOCTYPE html>
 <html lang="fr">

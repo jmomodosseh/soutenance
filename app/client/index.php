@@ -2,14 +2,15 @@
 
 session_start();
 
-include "app/commun/fonctions.php";
+include("app/commun/fonctions.php");
 
 $params = explode('/', $_GET['p']);
 $profile = "client";
 $default_resource = "connexion";
 $default_action = "index";
 
-$default_action_folder = "app/" . $profile . "/" . $default_resource . "/" . $default_action . ".php";
+//$default_action_folder = "app/" . $profile . "/" . $default_resource . "/" . $default_action . ".php";
+$default_action_folder = $default_resource . "/" . $default_action . ".php";
 
 if (isset($_GET['p']) && !empty($_GET['p'])) {
 

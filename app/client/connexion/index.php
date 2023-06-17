@@ -102,7 +102,7 @@
                       <button class="btn btn-primary w-100" type="submit">Connexion</button>
                     </div>
                     <div class="col-12">
-                      <p class="small mb-0">Pas de compte? <a href="pages-register.php"> Créer un compte</a></p>
+                      <p class="small mb-0">Pas de compte? <a href="../inscription"> Créer un compte</a></p>
                     </div>
                   </form>
 

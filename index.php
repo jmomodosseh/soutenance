@@ -6,7 +6,7 @@ define( 'DATABASE_HOST', 'localhost');
 define( 'DATABASE_NAME', 'salle_de_spectacle');
 define( 'DATABASE_USERNAME', 'root');
 define( 'DATABASE_PASSWORD', '');
-define( 'MAIL_ADDRESS', '');
+define( 'spect+2381180@gmail.com', '');
 define( 'MAIL_PASSWORD', '');
 
     $default_profile = "client";

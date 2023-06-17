@@ -162,7 +162,7 @@
                         <img class="img-fluid" src="<?=MYPROJECT?>public/images/eassai.jpg" alt="">
                         <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
                             <a href="actualites" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Plus savoir </a>
-                            <a href="espace_pro" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Reserver</a>
+                            <a href="espace_pro" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Ticket</a>
                         </div>
                     </div>
                     <div class="text-center p-4 pb-0">
@@ -183,7 +183,7 @@
                         <img class="img-fluid" src="<?=MYPROJECT?>public/images/essai1.jpg" alt="">
                         <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
                             <a href="actualites" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Plus savoir</a>
-                            <a href="espace_pro" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Reserver</a>
+                            <a href="espace_pro" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Ticket</a>
                         </div>
                     </div>
                     <div class="text-center p-4 pb-0">
@@ -204,7 +204,7 @@
                         <img class="img-fluid" src="<?=MYPROJECT?>public/images/essai2.jpg" alt="">
                         <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
                             <a href="actualites" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Savoir plus</a>
-                            <a href="espace_pro" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Reserver</a>
+                            <a href="espace_pro" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Ticket</a>
                         </div>
                     </div>
                     <div class="text-center p-4 pb-0">
