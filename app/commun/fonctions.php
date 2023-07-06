@@ -44,7 +44,7 @@ function envoi_mail(string $destination, string $subject, string $body): bool
         return $mail->send();
 
     } catch (Exception $e) {
-
+        echo $e;
         return false;
 
     }
@@ -212,7 +212,7 @@ function select_user_id(string $email)
 
     $database = connexion_db();
 
-    $request = "SELECT id FROM utilisateur WHERE email=:email";
+    $request = "SELECT id FROM user WHERE email=:email";
 
     $request_prepare = $database->prepare($request);
 

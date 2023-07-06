@@ -6,8 +6,8 @@ define( 'DATABASE_HOST', 'localhost');
 define( 'DATABASE_NAME', 'salle_de_spectacle');
 define( 'DATABASE_USERNAME', 'root');
 define( 'DATABASE_PASSWORD', '');
-define( 'spect+2381180@gmail.com', '');
-define( 'MAIL_PASSWORD', '');
+define( 'MAIL_ADDRESS', 'cinemaetspectacle11@gmail.com');
+define( 'MAIL_PASSWORD', 'alxpvlhpuxjxigxj');
 
     $default_profile = "client";
     $default_profile_folder = "app/client/index.php";

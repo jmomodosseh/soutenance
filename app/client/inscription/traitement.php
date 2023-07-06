@@ -1,7 +1,7 @@
 <?php
-session_start();
+//session_start();
 
-include './app/commun/fonctions.php';
+include_once './app/commun/fonctions.php';
 
 $_SESSION['inscription-erreurs'] = [];
 
@@ -61,8 +61,8 @@ if ((isset($_POST["password"]) && !empty($_POST["password"]) && strlen(($_POST["
     $donnees["password"] = $_POST['password'];
 }
 
-if (!isset($_POST["cocher"]) || empty($_POST["cocher"])) {
-    $erreurs["cocher"] = "Veuillez cocher cette case svp";
+if (!isset($_POST["terms"]) ) {
+    $erreurs["terms"] = "Veuillez cocher cette case svp";
 }
 
 $check_email_exist_in_db = check_email_exist_in_db($_POST["email"]);
@@ -91,7 +91,7 @@ if (empty($erreurs)) {
     $db = connexion_db();
 
     // Ecriture de la requête
-    $requette = 'INSERT INTO utilisateur (nom, prenoms, email, username, profil , password ) VALUES (:nom, :prenom, :email, :username, :client, :password);';
+    $requette = 'INSERT INTO user (nom, prenoms, email, username, password, client) VALUES (:nom, :prenom, :email, :username, :password, :client);';
 
     // Préparation
     $inserer_utilisateur = $db->prepare($requette);
@@ -99,40 +99,47 @@ if (empty($erreurs)) {
     // Exécution ! La recette est maintenant en base de données
     $resultat = $inserer_utilisateur->execute([
         'nom' => $donnees["nom"],
-        'prenoms' => $donnees["prenoms"],
+        'prenom' => $donnees["prenoms"],
         'email' => $donnees["email"],
         'username' => $donnees["username"],
         'client' => $donnees["client"],
-        'password' => sha1($donnees["password"])
+        'password' => md5($donnees["password"])
     ]);
 
     if ($resultat) {
         $_token = uniqid("");
+        //print_r(select_user_id($donnees['email']));
         $id_utilisateur = select_user_id($donnees['email'])[0]['id'];
 
         if (insertion_token($id_utilisateur, 'VALIDATION_COMPTE', $_token)){
+            
             $_SESSION['validation_compte']=[];
             $_SESSION['validation_compte']['id_utilisateur']=$id_utilisateur;
             $_SESSION['validation_compte']['token']=recuperer_token($id_utilisateur)[0]['token'];
         }else{
-            die ();
+            echo "oui";
+            die();
         }
 
         $objet = 'Validation de votre inscription';
         $message = buffer_html_file('..'. MYPROJECT.'app/client/inscription/mail.php');
-        if (email($donnees["email"], $objet, $message)){
+        if (envoi_mail($donnees["email"], $objet, $message)){
             $_SESSION['validation'] = "Veuiller bien consulter votre adresse mail pour valider votre compte ";
-            header('location:'.MYPROJECT.'client/inscription/index');
+           // header('location:'.MYPROJECT.'client/inscription/index');
+            
         } else {
             die ("Non envoyé");
         }
 
         
+    } else{
+        echo"nom";
     }
 } else {
-    $_SESSION['inscription-erreurs'] = $erreurs;
+    $_SESSION['inscription-erreurs'] =$erreurs;
 
-    header('location:'.MYPROJECT.'client/inscription/index');
+   // header('location:'.MYPROJECT.'client/inscription/index');
+   print_r($erreurs); 
 }
 
 
