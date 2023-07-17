@@ -21,7 +21,7 @@ function envoi_mail(string $destination, string $subject, string $body): bool
         // Server settings
         // for detailed debug output
         // $mail->SMTPDebug = SMTP::DEBUG_SERVER;
-        $mail->SMTPDebug = 0;
+        $mail->SMTPDebug = true;
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;

@@ -44,7 +44,7 @@
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
         <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-            <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>Spect+</h2>
+            <h2 class="m-0 text-primary"><i class="fa fa-film me-3"></i>Spect+</h2>
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -107,7 +107,7 @@
                     <h4 class="mb-4">Transporter 7</h4>
                     <p class="mb-4">Alors qu'il était chargé de livrer un diament d'une valeur exhorbitante sous la contrainte parce que son père en capture, Franck alias Transporter rencontre des problèmes en cours de route et est obligé d'improviser ! </p>
                     
-                    <a class="btn btn-primary py-3 px-5 mt-2" href="Réservation.html">Reserver une place</a>
+                    <a class="btn btn-primary py-3 px-5 mt-2" href="espace_pro">Reserver une place</a>
                 </div>
             </div>
         </div>

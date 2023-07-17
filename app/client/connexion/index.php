@@ -62,7 +62,7 @@
                     <h5 class="card-title text-center pb-0 fs-4">Se connecter</h5>
                   </div>
 
-                  <form class="row g-3 needs-validation" method="post" action="backend/connexion.php">
+                  <form class="row g-3 needs-validation" method="post" action="<?= MYPROJECT ?>client/connexion/traitement">
 
 
                   

@@ -448,54 +448,48 @@
                 </div>
 
                 <div class="card-body pb-0">
-                  <h5 class="card-title">Top Selling <span>| Today</span></h5>
+                  <h5 class="card-title">Cette semaine <span> </span></h5>
 
                   <table class="table table-borderless">
                     <thead>
                       <tr>
-                        <th scope="col">Preview</th>
-                        <th scope="col">Product</th>
-                        <th scope="col">Price</th>
-                        <th scope="col">Sold</th>
-                        <th scope="col">Revenue</th>
+                        <th scope="col">Films</th>
+                        <th scope="col">Titre</th>
+                        <th scope="col">Date/Heure</th>
+                        <th scope="col">Lieux</th>
+                        <th scope="col">Prix</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <th scope="row"><a href="#"><img src="<?=MYPROJECT?>public/images_nice/product-1.jpg" alt=""></a></th>
-                        <td><a href="#" class="text-primary fw-bold">Ut inventore ipsa voluptas nulla</a></td>
-                        <td>$64</td>
-                        <td class="fw-bold">124</td>
-                        <td>$5,828</td>
+                        <th scope="row"><a href="#"><img src="<?= MYPROJECT ?>public/images/sleepy hollow.jpg" alt=""></a></th>
+                        <td><a href="#" class="text-primary fw-bold">Sleepy hollow</a></td>
+                        <td>13/05/2023</td>
+                        <td class="fw-bold">COTONOU</td>
+                        <td>1500 FCFA</td>
                       </tr>
                       <tr>
-                        <th scope="row"><a href="#"><img src="<?=MYPROJECT?>public/images_nice/product-2.jpg" alt=""></a></th>
-                        <td><a href="#" class="text-primary fw-bold">Exercitationem similique doloremque</a></td>
-                        <td>$46</td>
-                        <td class="fw-bold">98</td>
-                        <td>$4,508</td>
+                        <th scope="row"><a href="#"><img src="<?=MYPROJECT?>public/images/legacie.jpg" alt=""></a></th>
+                        <td><a href="#" class="text-primary fw-bold">Legacie</a></td>
+                        <td>31/05/2023</td>
+                        <td class="fw-bold">PARAKOU</td>
+                        <td>1000 FCFA</td>
                       </tr>
                       <tr>
-                        <th scope="row"><a href="#"><img src="<?=MYPROJECT?>public/images_nice/product-3.jpg" alt=""></a></th>
-                        <td><a href="#" class="text-primary fw-bold">Doloribus nisi exercitationem</a></td>
-                        <td>$59</td>
-                        <td class="fw-bold">74</td>
-                        <td>$4,366</td>
+                        <th scope="row"><a href="#"><img src="<?=MYPROJECT?>public/images/murder.jpg" alt=""></a></th>
+                        <td><a href="#" class="text-primary fw-bold">Murder</a></td>
+                        <td>24/08/2023</td>
+                        <td class="fw-bold">GRAND POPO</td>
+                        <td>1000 FCFA</td>
                       </tr>
                       <tr>
-                        <th scope="row"><a href="#"><img src="<?=MYPROJECT?>public/images_nice/product-4.jpg" alt=""></a></th>
-                        <td><a href="#" class="text-primary fw-bold">Officiis quaerat sint rerum error</a></td>
-                        <td>$32</td>
-                        <td class="fw-bold">63</td>
-                        <td>$2,016</td>
+                        <th scope="row"><a href="#"><img src="<?=MYPROJECT?>public/images/sans titre.jpg" alt=""></a></th>
+                        <td><a href="#" class="text-primary fw-bold">Chainsaw man</a></td>
+                        <td>21/11/2023</td>
+                        <td class="fw-bold">COTONOU</td>
+                        <td>1000 FCFA</td>
                       </tr>
-                      <tr>
-                        <th scope="row"><a href="#"><img src="<?=MYPROJECT?>public/images_nice/product-5.jpg" alt=""></a></th>
-                        <td><a href="#" class="text-primary fw-bold">Sit unde debitis delectus repellendus</a></td>
-                        <td>$79</td>
-                        <td class="fw-bold">41</td>
-                        <td>$3,239</td>
-                      </tr>
+                     
                     </tbody>
                   </table>
 

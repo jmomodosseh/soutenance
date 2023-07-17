@@ -98,7 +98,7 @@ if (isset($_SESSION['donnees_utilisateur']) && !empty($_SESSION['donnees_utilisa
                                 </span>
                     </div>
 
-                    <form class="row g-3 needs-validation" method="post" action="backend/register.php">
+                    <form class="row g-3 needs-validation" method="post" action="traitement.php">
                     <div class="col-12">
                     <label for="inscription-nom">Prénom:
                                     <span class="text-danger">(*)</span>

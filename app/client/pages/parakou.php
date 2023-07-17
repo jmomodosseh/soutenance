@@ -44,7 +44,7 @@
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
         <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-            <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>Spect+</h2>
+            <h2 class="m-0 text-primary"><i class="fa fa-film me-3"></i>Spect+</h2>
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -232,47 +232,89 @@
     <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container">
             <div class="text-center">
-                <h6 class="section-title bg-white text-center text-primary px-3">Avis divers</h6>
+                <h6 class="section-title bg-white text-center text-primary px-3">Témoignages</h6>
                 <h1 class="mb-5">Nos clients disent!</h1>
             </div>
             <div class="owl-carousel testimonial-carousel position-relative">
                 <div class="testimonial-item text-center">
-                    <img class="border rounded-circle p-2 mx-auto mb-3" src="<?= MYPROJECT ?>public/images/testimonial-1.jpg" style="width: 80px; height: 80px;">
-                    <h5 class="mb-0">Carla</h5>
-                    <p>Manequin</p>
+                    <img class="border rounded-circle p-2 mx-auto mb-3" src="<?=MYPROJECT?>public/images/p-1.jpg" style="width: 80px; height: 80px;">
+                    <h5 class="mb-0">Lawson Joêlle</h5>
+                    <p>Cinéaste</p>
                     <div class="testimonial-text bg-light text-center p-4">
-                    <p class="mb-0">juste top</p>
+                    <p class="mb-0">fiable!.</p>
                     </div>
                 </div>
                 <div class="testimonial-item text-center">
-                    <img class="border rounded-circle p-2 mx-auto mb-3" src="<?= MYPROJECT ?>public/images/testimonial-2.jpg" style="width: 80px; height: 80px;">
-                    <h5 class="mb-0">Clément</h5>
-                    <p>Proffesseur</p>
+                    <img class="border rounded-circle p-2 mx-auto mb-3" src="<?=MYPROJECT?>public/images/p-5.jpeg" style="width: 80px; height: 80px;">
+                    <h5 class="mb-0">José Yevi</h5>
+                    <p>Videaste</p>
                     <div class="testimonial-text bg-light text-center p-4">
-                    <p class="mb-0">Trop bien</p>
+                    <p class="mb-0"> facile à utiliser</p>
                     </div>
                 </div>
                 <div class="testimonial-item text-center">
-                    <img class="border rounded-circle p-2 mx-auto mb-3" src="<?= MYPROJECT ?>public/images/testimonial-3.jpg" style="width: 80px; height: 80px;">
-                    <h5 class="mb-0">Claver</h5>
+                    <img class="border rounded-circle p-2 mx-auto mb-3" src="<?=MYPROJECT?>public/images/p-6.png" style="width: 80px; height: 80px;">
+                    <h5 class="mb-0">Draymond Lars</h5>
+                    <p>Réalisateur</p>
+                    <div class="testimonial-text bg-light text-center p-4">
+                    <p class="mb-0">beau et bien réflechis</p>
+                    </div>
+                </div>
+                <div class="testimonial-item text-center">
+                    <img class="border rounded-circle p-2 mx-auto mb-3" src="<?=MYPROJECT?>public/images/p-3.jpg" style="width: 80px; height: 80px;">
+                    <h5 class="mb-0">Cindy Larson</h5>
                     <p>Designer</p>
                     <div class="testimonial-text bg-light text-center p-4">
-                    <p class="mb-0">magnifique</p>
-                    </div>
-                </div>
-                <div class="testimonial-item text-center">
-                    <img class="border rounded-circle p-2 mx-auto mb-3" src="<?= MYPROJECT ?>public/images/testimonial-4.jpg" style="width: 80px; height: 80px;">
-                    <h5 class="mb-0">Marlène</h5>
-                    <p>Journaliste</p>
-                    <div class="testimonial-text bg-light text-center p-4">
-                    <p class="mb-0">facile à utiliser</p>
+                    <p class="mb-0">Rapide et simple d'utilisation</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Testimonial End -->
-        
+    <!-- Testimonial End --> <!-- Testimonial Start -->
+    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="text-center">
+                <h6 class="section-title bg-white text-center text-primary px-3">Témoignages</h6>
+                <h1 class="mb-5">Nos clients disent!</h1>
+            </div>
+            <div class="owl-carousel testimonial-carousel position-relative">
+                <div class="testimonial-item text-center">
+                    <img class="border rounded-circle p-2 mx-auto mb-3" src="<?=MYPROJECT?>public/images/p-1.jpg" style="width: 80px; height: 80px;">
+                    <h5 class="mb-0">Lawson Joêlle</h5>
+                    <p>Cinéaste</p>
+                    <div class="testimonial-text bg-light text-center p-4">
+                    <p class="mb-0">fiable!.</p>
+                    </div>
+                </div>
+                <div class="testimonial-item text-center">
+                    <img class="border rounded-circle p-2 mx-auto mb-3" src="<?=MYPROJECT?>public/images/p-5.jpeg" style="width: 80px; height: 80px;">
+                    <h5 class="mb-0">José Yevi</h5>
+                    <p>Videaste</p>
+                    <div class="testimonial-text bg-light text-center p-4">
+                    <p class="mb-0"> facile à utiliser</p>
+                    </div>
+                </div>
+                <div class="testimonial-item text-center">
+                    <img class="border rounded-circle p-2 mx-auto mb-3" src="<?=MYPROJECT?>public/images/p-6.png" style="width: 80px; height: 80px;">
+                    <h5 class="mb-0">Draymond Lars</h5>
+                    <p>Réalisateur</p>
+                    <div class="testimonial-text bg-light text-center p-4">
+                    <p class="mb-0">beau et bien réflechis</p>
+                    </div>
+                </div>
+                <div class="testimonial-item text-center">
+                    <img class="border rounded-circle p-2 mx-auto mb-3" src="<?=MYPROJECT?>public/images/p-3.jpg" style="width: 80px; height: 80px;">
+                    <h5 class="mb-0">Cindy Larson</h5>
+                    <p>Designer</p>
+                    <div class="testimonial-text bg-light text-center p-4">
+                    <p class="mb-0">Rapide et simple d'utilisation</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->     
 
     <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">

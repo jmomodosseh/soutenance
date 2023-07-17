@@ -133,7 +133,7 @@
               <hr class="dropdown-divider">
             </li>
             <li class="dropdown-footer">
-              <a href="#">Show all notifications</a>
+              <a href="#">toutes les notifications</a>
             </li>
 
           </ul><!-- End Notification Dropdown Items -->
@@ -144,13 +144,13 @@
 
           <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
             <i class="bi bi-chat-left-text"></i>
-            <span class="badge bg-success badge-number">3</span>
+            <span class="badge bg-success badge-number">5</span>
           </a><!-- End Messages Icon -->
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow messages">
             <li class="dropdown-header">
-              You have 3 new messages
-              <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
+              Vous avez 3 nouveaux messages
+              <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">Tout voir</span></a>
             </li>
             <li>
               <hr class="dropdown-divider">
@@ -158,11 +158,11 @@
 
             <li class="message-item">
               <a href="#">
-                <img src="<?= MYPROJECT ?>public/images/messages-1.jpg" alt="" class="rounded-circle">
+                <img src="<?= MYPROJECT ?>public/images/p-3.jpg" alt="" class="rounded-circle">
                 <div>
-                  <h4>Maria Hudson</h4>
-                  <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
-                  <p>4 hrs. ago</p>
+                  <h4>Maria Nelson</h4>
+                  <p>cc ca va?.</p>
+                  <p>il y a 4 hrs.</p>
                 </div>
               </a>
             </li>
@@ -172,11 +172,11 @@
 
             <li class="message-item">
               <a href="#">
-                <img src="<?= MYPROJECT ?>public/images/messages-2.jpg" alt="" class="rounded-circle">
+                <img src="<?= MYPROJECT ?>public/images/p-6.png" alt="" class="rounded-circle">
                 <div>
-                  <h4>Anna Nelson</h4>
-                  <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
-                  <p>6 hrs. ago</p>
+                  <h4>Anna madison</h4>
+                  <p>oui on se voit avec le monsieur a 12H</p>
+                  <p>il y a 6 hrs.</p>
                 </div>
               </a>
             </li>
@@ -186,11 +186,11 @@
 
             <li class="message-item">
               <a href="#">
-                <img src="<?= MYPROJECT ?>public/images/messages-3.jpg" alt="" class="rounded-circle">
+                <img src="<?= MYPROJECT ?>public/images/p-1.jpg" alt="" class="rounded-circle">
                 <div>
-                  <h4>David Muldon</h4>
-                  <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
-                  <p>8 hrs. ago</p>
+                  <h4>David Muler</h4>
+                  <p>oui je vais bien et toi?</p>
+                  <p>Il y a 8 hrs</p>
                 </div>
               </a>
             </li>
@@ -199,7 +199,7 @@
             </li>
 
             <li class="dropdown-footer">
-              <a href="#">Show all messages</a>
+              <a href="#">Tous les messages</a>
             </li>
 
           </ul><!-- End Messages Dropdown Items -->
@@ -209,7 +209,7 @@
         <li class="nav-item dropdown pe-3">
 
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-            <img src="<?= MYPROJECT ?>public/images/profile-img.jpg" alt="Profile" class="rounded-circle">
+            <img src="<?= MYPROJECT ?>public/images/curry.jpg" alt="Profile" class="rounded-circle">
             <span class="d-none d-md-block dropdown-toggle ps-2">Dosseh</span>
           </a><!-- End Profile Iamge Icon -->
 
@@ -223,7 +223,7 @@
             </li>
 
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+              <a class="dropdown-item d-flex align-items-center" href="profile">
                 <i class="bi bi-person"></i>
                 <span>Mon profil</span>
               </a>
@@ -233,7 +233,7 @@
             </li>
 
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+              <a class="dropdown-item d-flex align-items-center" href="profile">
                 <i class="bi bi-gear"></i>
                 <span>Paramètre du compte</span>
               </a>
@@ -243,7 +243,7 @@
             </li>
 
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
+              <a class="dropdown-item d-flex align-items-center" href="contact">
                 <i class="bi bi-question-circle"></i>
                 <span>Besoin d'aide?</span>
               </a>
@@ -253,7 +253,7 @@
             </li>
 
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="#">
+              <a class="dropdown-item d-flex align-items-center" href="../deconnexion">
                 <i class="bi bi-box-arrow-right"></i>
                 <span>Se déconnecter</span>
               </a>
@@ -347,11 +347,7 @@
           <i class="bi bi-circle"></i><span>Espace pro</span>
         </a>
       </li>
-      <li>
-        <a href="charts-echarts.html">
-          <i class="bi bi-circle"></i><span>ECharts</span>
-        </a>
-      </li>
+     
       <li class="nav-item">
     <a class="nav-link collapsed" href="users-profile.html">
     <i class="bi bi-circle"></i><span>profile</span>
@@ -417,7 +413,7 @@
           <div class="card">
             <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
 
-              <img src="<?= MYPROJECT ?>public/images/profile-img.jpg" alt="Profile" class="rounded-circle">
+              <img src="<?= MYPROJECT ?>public/images/p-6.png" alt="Profile" class="rounded-circle">
               <h2>Dosseh</h2>
               <h3>Web master</h3>
               <div class="social-links mt-2">
@@ -439,7 +435,7 @@
               <ul class="nav nav-tabs nav-tabs-bordered">
 
                 <li class="nav-item">
-                  <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#profile-overview">Overview</button>
+                  <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#profile-overview">Vos informations</button>
                 </li>
 
                 <li class="nav-item">
@@ -459,7 +455,7 @@
 
                 <div class="tab-pane fade show active profile-overview" id="profile-overview">
                   <h5 class="card-title">A propos</h5>
-                  <p class="small fst-italic">Sunt est soluta temporibus accusantium neque nam maiores cumque temporibus. Tempora libero non est unde veniam est qui dolor. Ut sunt iure rerum quae quisquam autem eveniet perspiciatis odit. Fuga sequi sed ea saepe at unde.</p>
+                  <p class="small fst-italic"> Jeune developpeur soucieux de son projet de memoir et de son avenir</p>
 
                   <h5 class="card-title">Details du profil</h5>
 
@@ -470,7 +466,7 @@
 
                   <div class="row">
                     <div class="col-lg-3 col-md-4 label">Compagnie</div>
-                    <div class="col-lg-9 col-md-8">Lueilwitz, Wisoky and Leuschke</div>
+                    <div class="col-lg-9 col-md-8">Africa cargot express</div>
                   </div>
 
                   <div class="row">
@@ -480,17 +476,17 @@
 
                   <div class="row">
                     <div class="col-lg-3 col-md-4 label">Pays</div>
-                    <div class="col-lg-9 col-md-8">USA</div>
+                    <div class="col-lg-9 col-md-8">Benin</div>
                   </div>
 
                   <div class="row">
                     <div class="col-lg-3 col-md-4 label">Address</div>
-                    <div class="col-lg-9 col-md-8">A108 Adam Street, New York, NY 535022</div>
+                    <div class="col-lg-9 col-md-8">COTONOU/BENIN</div>
                   </div>
 
                   <div class="row">
                     <div class="col-lg-3 col-md-4 label">Numero de Téléphone</div>
-                    <div class="col-lg-9 col-md-8">(436) 486-3538 x29071</div>
+                    <div class="col-lg-9 col-md-8">229 99337363</div>
                   </div>
 
                   <div class="row">
@@ -503,11 +499,11 @@
                 <div class="tab-pane fade profile-edit pt-3" id="profile-edit">
 
                   <!-- Profile Edit Form -->
-                  <form>
+                  <form method="post" action="fonctions/modifier_profile.php">
                     <div class="row mb-3">
                       <label for="profileImage" class="col-md-4 col-lg-3 col-form-label">Image du profil</label>
                       <div class="col-md-8 col-lg-9">
-                        <img src="<?= MYPROJECT ?>public/images/profile-img.jpg" alt="Profile">
+                        <img src="<?= MYPROJECT ?>public/images/p-6.png" alt="Profile">
                         <div class="pt-2">
                           <a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-upload"></i></a>
                           <a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a>
@@ -516,88 +512,46 @@
                     </div>
 
                     <div class="row mb-3">
-                      <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Nom complet</label>
+                      <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Nom </label>
                       <div class="col-md-8 col-lg-9">
-                        <input name="fullName" type="text" class="form-control" id="fullName" value="Kevin Anderson">
+                        <input name="fullName" type="text" class="form-control" id="fullName" value="Kevin Anderson" required>
+                      </div>
+                    </div>
+
+                   
+                   
+
+                    <div class="row mb-3">
+                      <label for="Job" class="col-md-4 col-lg-3 col-form-label">Prenom</label>
+                      <div class="col-md-8 col-lg-9">
+                        <input name="prenom" type="text" class="form-control" id="prenom" value="Web Designer" required>
                       </div>
                     </div>
 
                     <div class="row mb-3">
-                      <label for="about" class="col-md-4 col-lg-3 col-form-label">A propos</label>
+                      <label for="Country" class="col-md-4 col-lg-3 col-form-label">Nom d'utilisateur</label>
                       <div class="col-md-8 col-lg-9">
-                        <textarea name="about" class="form-control" id="about" style="height: 100px">Sunt est soluta temporibus accusantium neque nam maiores cumque temporibus. Tempora libero non est unde veniam est qui dolor. Ut sunt iure rerum quae quisquam autem eveniet perspiciatis odit. Fuga sequi sed ea saepe at unde.</textarea>
+                        <input name="username" type="text" class="form-control" id="username" value="USA" required>
                       </div>
                     </div>
 
-                    <div class="row mb-3">
-                      <label for="company" class="col-md-4 col-lg-3 col-form-label">Compagnie</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="company" type="text" class="form-control" id="company" value="Lueilwitz, Wisoky and Leuschke">
-                      </div>
-                    </div>
+                    
 
-                    <div class="row mb-3">
-                      <label for="Job" class="col-md-4 col-lg-3 col-form-label">Travail</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="job" type="text" class="form-control" id="Job" value="Web Designer">
-                      </div>
-                    </div>
-
-                    <div class="row mb-3">
-                      <label for="Country" class="col-md-4 col-lg-3 col-form-label">Pays</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="country" type="text" class="form-control" id="Country" value="USA">
-                      </div>
-                    </div>
-
-                    <div class="row mb-3">
-                      <label for="Address" class="col-md-4 col-lg-3 col-form-label">Address</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="address" type="text" class="form-control" id="Address" value="A108 Adam Street, New York, NY 535022">
-                      </div>
-                    </div>
-
-                    <div class="row mb-3">
-                      <label for="Phone" class="col-md-4 col-lg-3 col-form-label">téléphone</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="phone" type="text" class="form-control" id="Phone" value="(436) 486-3538 x29071">
-                      </div>
-                    </div>
+                  
 
                     <div class="row mb-3">
                       <label for="Email" class="col-md-4 col-lg-3 col-form-label">Email</label>
                       <div class="col-md-8 col-lg-9">
-                        <input name="email" type="email" class="form-control" id="Email" value="k.anderson@example.com">
+                        <input name="email" type="email" class="form-control" id="Email" value="k.anderson@example.com" required>
                       </div>
                     </div>
 
-                    <div class="row mb-3">
-                      <label for="Twitter" class="col-md-4 col-lg-3 col-form-label">profil Twitter</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="twitter" type="text" class="form-control" id="Twitter" value="https://twitter.com/#">
-                      </div>
-                    </div>
+                  
 
-                    <div class="row mb-3">
-                      <label for="Facebook" class="col-md-4 col-lg-3 col-form-label">profil Facebook</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="facebook" type="text" class="form-control" id="Facebook" value="https://facebook.com/#">
-                      </div>
-                    </div>
+                   
 
-                    <div class="row mb-3">
-                      <label for="Instagram" class="col-md-4 col-lg-3 col-form-label">profil Instagram</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="instagram" type="text" class="form-control" id="Instagram" value="https://instagram.com/#">
-                      </div>
-                    </div>
+                   
 
-                    <div class="row mb-3">
-                      <label for="Linkedin" class="col-md-4 col-lg-3 col-form-label">profil Linkedin</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="linkedin" type="text" class="form-control" id="Linkedin" value="https://linkedin.com/#">
-                      </div>
-                    </div>
 
                     <div class="text-center">
                       <button type="submit" class="btn btn-primary">Enrégistrer</button>
