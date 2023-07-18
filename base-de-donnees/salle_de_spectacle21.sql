@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : mar. 18 juil. 2023 à 13:35
+-- Généré le : mar. 18 juil. 2023 à 22:06
 -- Version du serveur : 5.7.36
 -- Version de PHP : 7.4.26
 
@@ -214,6 +214,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   `cree_le` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `mis_a_jour_le` varchar(255) DEFAULT NULL,
   `client` varchar(10) NOT NULL,
+  `image` blob,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb4;
 
@@ -221,17 +222,17 @@ CREATE TABLE IF NOT EXISTS `user` (
 -- Déchargement des données de la table `user`
 --
 
-INSERT INTO `user` (`id`, `nom`, `prenoms`, `email`, `username`, `password`, `avatar`, `profil`, `est_actif`, `est_supprime`, `cree_le`, `mis_a_jour_le`, `client`) VALUES
-(16, 'AGBEGNINOU', 'momo', 'madisonjdoss954@gmail.com', 'vegor', '6e498b8130f962b40326e3eb2253db93', NULL, NULL, 0, 0, '2023-07-08 09:55:15', NULL, 'client'),
-(17, 'fabio', 'biobio', 'fabio123@gmail.com', 'bio', '973c61d96a7f26714c1bfb02fb4df9fd', NULL, NULL, 0, 0, '2023-07-12 16:46:55', NULL, 'client'),
-(18, 'flora', 'maria', 'floramaria@gmail.com', 'malolo', '8163a2ea4dad02b7244794114720b227', NULL, NULL, 0, 0, '2023-07-12 21:57:56', NULL, 'client'),
-(19, 'flora', 'maria', 'floramaria@gmail.com', 'malolo', '8163a2ea4dad02b7244794114720b227', NULL, NULL, 0, 0, '2023-07-12 21:58:47', NULL, 'client'),
-(20, 'frejo', 'demain', 'demain@gmail.com', 'ojo', '11a106754fb6698e5a1f47f5ed0aaa06', NULL, NULL, 0, 0, '2023-07-12 22:04:24', NULL, 'client'),
-(21, 'moumouni', 'isis', 'isomoumouni@gmail.com', 'isis', 'c069821833532463d138e5bdde2e15c5', NULL, NULL, 0, 0, '2023-07-13 03:42:35', NULL, 'client'),
-(22, 'herman', 'herr', 'emaildemoi@gmail.com', 'herm', '25d55ad283aa400af464c76d713c07ad', NULL, NULL, 0, 0, '2023-07-17 21:59:45', NULL, 'client'),
-(23, 'madison', 'momo', 'madisonjdoss954@gmail.com', 'momo', '25f9e794323b453885f5181f1b624d0b', NULL, NULL, 0, 0, '2023-07-17 22:53:34', NULL, 'client'),
-(24, 'madison', 'momo', 'madisonjdoss954@gmail.com', 'momo', '25f9e794323b453885f5181f1b624d0b', NULL, NULL, 0, 0, '2023-07-18 13:12:14', NULL, 'client'),
-(25, 'modeste', 'momo', 'madisonjdoss954@gmail.com', 'momo', '25f9e794323b453885f5181f1b624d0b', NULL, NULL, 0, 0, '2023-07-18 13:12:52', NULL, 'client');
+INSERT INTO `user` (`id`, `nom`, `prenoms`, `email`, `username`, `password`, `avatar`, `profil`, `est_actif`, `est_supprime`, `cree_le`, `mis_a_jour_le`, `client`, `image`) VALUES
+(16, 'AGBEGNINOU', 'momo', 'madisonjdoss954@gmail.com', 'vegor', '6e498b8130f962b40326e3eb2253db93', NULL, NULL, 0, 0, '2023-07-08 09:55:15', NULL, 'client', NULL),
+(17, 'fabio', 'biobio', 'fabio123@gmail.com', 'bio', '973c61d96a7f26714c1bfb02fb4df9fd', NULL, NULL, 0, 0, '2023-07-12 16:46:55', NULL, 'client', NULL),
+(18, 'flora', 'maria', 'floramaria@gmail.com', 'malolo', '8163a2ea4dad02b7244794114720b227', NULL, NULL, 0, 0, '2023-07-12 21:57:56', NULL, 'client', NULL),
+(19, 'flora', 'maria', 'floramaria@gmail.com', 'malolo', '8163a2ea4dad02b7244794114720b227', NULL, NULL, 0, 0, '2023-07-12 21:58:47', NULL, 'client', NULL),
+(20, 'frejo', 'demain', 'demain@gmail.com', 'ojo', '11a106754fb6698e5a1f47f5ed0aaa06', NULL, NULL, 0, 0, '2023-07-12 22:04:24', NULL, 'client', NULL),
+(21, 'moumouni', 'isis', 'isomoumouni@gmail.com', 'isis', 'c069821833532463d138e5bdde2e15c5', NULL, NULL, 0, 0, '2023-07-13 03:42:35', NULL, 'client', NULL),
+(22, 'herman', 'herr', 'emaildemoi@gmail.comertyy', 'herm', '25d55ad283aa400af464c76d713c07ad', NULL, NULL, 0, 0, '2023-07-17 21:59:45', NULL, 'client', NULL),
+(23, 'madison', 'momo', 'madisonjdoss954@gmail.com', 'momo', '25f9e794323b453885f5181f1b624d0b', NULL, NULL, 0, 0, '2023-07-17 22:53:34', NULL, 'client', NULL),
+(24, 'madison', 'momo', 'madisonjdoss954@gmail.com', 'momo', '25f9e794323b453885f5181f1b624d0b', NULL, NULL, 0, 0, '2023-07-18 13:12:14', NULL, 'client', NULL),
+(25, 'modeste', 'momo', 'madisonjdoss954@gmail.com', 'momo', '25f9e794323b453885f5181f1b624d0b', NULL, NULL, 0, 0, '2023-07-18 13:12:52', NULL, 'client', NULL);
 
 --
 -- Contraintes pour les tables déchargées
