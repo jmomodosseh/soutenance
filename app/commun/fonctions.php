@@ -99,6 +99,26 @@ function check_email_exist_in_db(string $email)
     return $check;
 }
 
+function getUser($id){
+    $database = connexion_db();
+
+    $request = "SELECT * FROM user WHERE id=:id";
+
+    $request_prepare = $database->prepare($request);
+
+    $request_prepare->execute([
+        'id' => $id,
+    ]);
+    $count = $request_prepare->rowCount();
+    if($count > 0){
+        $data = $request_prepare->fetchAll(PDO::FETCH_ASSOC);
+       // $_SESSION["userID"] = $data[0]["id"];
+       return $data[0];
+    } else {
+      return [];
+    }
+}
+
 
 /**
  * Cette fonction permet de verifier si un utilisateur dans la base de donnée ne possède pas ce nom d'utilisateur.

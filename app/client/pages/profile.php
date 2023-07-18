@@ -499,7 +499,7 @@
                 <div class="tab-pane fade profile-edit pt-3" id="profile-edit">
 
                   <!-- Profile Edit Form -->
-                  <form method="post" action="fonctions/modifier_profile.php">
+                  <form method="post" action="<?= MYPROJECT ?>client/utils/modifier_profil">
                     <div class="row mb-3">
                       <label for="profileImage" class="col-md-4 col-lg-3 col-form-label">Image du profil</label>
                       <div class="col-md-8 col-lg-9">
@@ -514,7 +514,7 @@
                     <div class="row mb-3">
                       <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Nom </label>
                       <div class="col-md-8 col-lg-9">
-                        <input name="fullName" type="text" class="form-control" id="fullName" value="Kevin Anderson" required>
+                        <input name="fullName" type="text" class="form-control" id="fullName" value=<?php echo $_SESSION["nom"] ?> required>
                       </div>
                     </div>
 
@@ -524,14 +524,14 @@
                     <div class="row mb-3">
                       <label for="Job" class="col-md-4 col-lg-3 col-form-label">Prenom</label>
                       <div class="col-md-8 col-lg-9">
-                        <input name="prenom" type="text" class="form-control" id="prenom" value="Web Designer" required>
+                        <input name="prenom" type="text" class="form-control" id="prenom" value=<?php echo $_SESSION["prenom"] ?> required>
                       </div>
                     </div>
 
                     <div class="row mb-3">
                       <label for="Country" class="col-md-4 col-lg-3 col-form-label">Nom d'utilisateur</label>
                       <div class="col-md-8 col-lg-9">
-                        <input name="username" type="text" class="form-control" id="username" value="USA" required>
+                        <input name="username" type="text" class="form-control" id="username" value=<?php echo $_SESSION["username"] ?> required>
                       </div>
                     </div>
 
@@ -542,7 +542,7 @@
                     <div class="row mb-3">
                       <label for="Email" class="col-md-4 col-lg-3 col-form-label">Email</label>
                       <div class="col-md-8 col-lg-9">
-                        <input name="email" type="email" class="form-control" id="Email" value="k.anderson@example.com" required>
+                        <input name="email" type="email" class="form-control" id="Email" value=<?php echo $_SESSION["email"] ?> required>
                       </div>
                     </div>
 

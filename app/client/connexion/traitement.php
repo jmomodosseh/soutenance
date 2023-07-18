@@ -23,6 +23,9 @@ if (empty($erreurs)) {
         $data = $request_prepare->fetchAll(PDO::FETCH_ASSOC);
         $_SESSION["username"] = $_POST["username"];
         $_SESSION["userID"] = $data[0]["id"];
+        $_SESSION["nom"] = $data[0]["nom"];
+        $_SESSION["prenom"] = $data[0]["prenoms"];
+        $_SESSION["email"] = $data[0]["email"];
         header("location: ../pages/dashboard");
     } else {
         header("location: client/connexion/?error=true");
