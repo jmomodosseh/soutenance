@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Hôte : 127.0.0.1
--- Généré le : mar. 16 mai 2023 à 11:07
--- Version du serveur : 10.4.25-MariaDB
--- Version de PHP : 7.4.30
+-- Hôte : 127.0.0.1:3306
+-- Généré le : mar. 18 juil. 2023 à 13:35
+-- Version du serveur : 5.7.36
+-- Version de PHP : 7.4.26
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,45 +24,14 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Structure de la table `acteur`
---
-
-CREATE TABLE `acteur` (
-  `id` int(10) NOT NULL,
-  `nom` varchar(50) NOT NULL,
-  `email` varchar(50) NOT NULL,
-  `username` varchar(50) NOT NULL,
-  `password` varchar(100) NOT NULL,
-  `date` datetime(6) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Déchargement des données de la table `acteur`
---
-
-INSERT INTO `acteur` (`id`, `nom`, `email`, `username`, `password`, `date`) VALUES
-(1, 'dosseh', 'lhciohiah@gmail.com', 'momo', '0450f344159c7ddebf18615b960c9837', NULL),
-(2, 'dosseh', 'lhciohiah@gmail.com', 'momo', '0450f344159c7ddebf18615b960c9837', NULL),
-(3, 'dosseh', 'lhciohiah@gmail.com', 'momo', '0450f344159c7ddebf18615b960c9837', NULL),
-(4, 'dosseh', 'lhciohiah@gmail.com', 'momo', '0450f344159c7ddebf18615b960c9837', NULL),
-(5, 'dosseh', 'lhciohiah@gmail.com', 'momo', '0450f344159c7ddebf18615b960c9837', NULL),
-(6, 'dosseh', 'lhciohiah@gmail.com', 'momo', '0450f344159c7ddebf18615b960c9837', NULL),
-(7, 'dosseh', 'lhciohiah@gmail.com', 'momo', '0450f344159c7ddebf18615b960c9837', NULL),
-(8, 'madi', 'momo@gmail.com', 'dosseh', '29c1edee0a94dd805f8347ca8dd16f1d', NULL),
-(9, 'demy', 'demy12345678@gmail.com', 'momo', 'a4cbd3a3dc52cef6b1537562740dba1f', NULL),
-(12, 'childo', 'childo@gmail.com', 'childo10', 'ca232ab2285c9f70ba9243a2abaaf8c7', NULL),
-(13, 'childo', 'childo@gmail.com', 'childo10', 'ca232ab2285c9f70ba9243a2abaaf8c7', NULL),
-(14, 'childo', 'childo@gmail.com', 'childo10', '202cb962ac59075b964b07152d234b70', NULL);
-
--- --------------------------------------------------------
-
---
 -- Structure de la table `artiste`
 --
 
-CREATE TABLE `artiste` (
-  `num_arstiste` int(11) NOT NULL,
-  `nom_artiste` varchar(250) NOT NULL
+DROP TABLE IF EXISTS `artiste`;
+CREATE TABLE IF NOT EXISTS `artiste` (
+  `num_arstiste` int(11) NOT NULL AUTO_INCREMENT,
+  `nom_artiste` varchar(250) NOT NULL,
+  PRIMARY KEY (`num_arstiste`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -71,10 +40,14 @@ CREATE TABLE `artiste` (
 -- Structure de la table `artiste_representation`
 --
 
-CREATE TABLE `artiste_representation` (
-  `id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `artiste_representation`;
+CREATE TABLE IF NOT EXISTS `artiste_representation` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `num_representation` int(11) NOT NULL,
-  `num_artiste` int(11) NOT NULL
+  `num_artiste` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `artiste_representation_representation_num_representation` (`num_representation`),
+  KEY `artiste_representation_artiste_num_artiste` (`num_artiste`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -83,9 +56,11 @@ CREATE TABLE `artiste_representation` (
 -- Structure de la table `piece`
 --
 
-CREATE TABLE `piece` (
-  `num_piece` int(11) NOT NULL,
-  `lib_piece` varchar(250) NOT NULL
+DROP TABLE IF EXISTS `piece`;
+CREATE TABLE IF NOT EXISTS `piece` (
+  `num_piece` int(11) NOT NULL AUTO_INCREMENT,
+  `lib_piece` varchar(250) NOT NULL,
+  PRIMARY KEY (`num_piece`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -94,10 +69,14 @@ CREATE TABLE `piece` (
 -- Structure de la table `piece_salle`
 --
 
-CREATE TABLE `piece_salle` (
-  `id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `piece_salle`;
+CREATE TABLE IF NOT EXISTS `piece_salle` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `num_salle` int(11) NOT NULL,
-  `num_piece` int(11) NOT NULL
+  `num_piece` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `piece_salle_salle_num_salle` (`num_salle`),
+  KEY `piece_salle_piece_num_piece` (`num_piece`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -106,13 +85,17 @@ CREATE TABLE `piece_salle` (
 -- Structure de la table `representation`
 --
 
-CREATE TABLE `representation` (
-  `num_representation` int(11) NOT NULL,
+DROP TABLE IF EXISTS `representation`;
+CREATE TABLE IF NOT EXISTS `representation` (
+  `num_representation` int(11) NOT NULL AUTO_INCREMENT,
   `date_representation` date NOT NULL,
   `hdeb_representation` time NOT NULL,
   `hfin_representation` time NOT NULL,
   `num_salle` int(11) NOT NULL,
-  `num_spectacle` int(11) NOT NULL
+  `num_spectacle` int(11) NOT NULL,
+  PRIMARY KEY (`num_representation`),
+  KEY `representation_salle_num_salle` (`num_salle`),
+  KEY `representation_spectacle_num_spectacle` (`num_spectacle`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -121,13 +104,16 @@ CREATE TABLE `representation` (
 -- Structure de la table `salle`
 --
 
-CREATE TABLE `salle` (
-  `num_salle` int(11) NOT NULL,
+DROP TABLE IF EXISTS `salle`;
+CREATE TABLE IF NOT EXISTS `salle` (
+  `num_salle` int(11) NOT NULL AUTO_INCREMENT,
   `capacite` int(11) NOT NULL,
   `type_salle` varchar(250) NOT NULL,
   `nom_pro` varchar(250) NOT NULL,
   `pre_pro` varchar(250) NOT NULL,
-  `num_representation` int(11) NOT NULL
+  `num_representation` int(11) NOT NULL,
+  PRIMARY KEY (`num_salle`),
+  KEY `salle_representation_num_representation` (`num_representation`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -136,10 +122,13 @@ CREATE TABLE `salle` (
 -- Structure de la table `spectacle`
 --
 
-CREATE TABLE `spectacle` (
-  `num_spectacle` int(11) NOT NULL,
+DROP TABLE IF EXISTS `spectacle`;
+CREATE TABLE IF NOT EXISTS `spectacle` (
+  `num_spectacle` int(11) NOT NULL AUTO_INCREMENT,
   `nom_spectacle` varchar(250) NOT NULL,
-  `num_arstiste` int(11) NOT NULL
+  `num_arstiste` int(11) NOT NULL,
+  PRIMARY KEY (`num_spectacle`),
+  KEY `spectacle_artiste_num_artiste` (`num_arstiste`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -148,9 +137,11 @@ CREATE TABLE `spectacle` (
 -- Structure de la table `ticket`
 --
 
-CREATE TABLE `ticket` (
-  `cod_ticket` int(11) NOT NULL,
-  `Libellé` text NOT NULL
+DROP TABLE IF EXISTS `ticket`;
+CREATE TABLE IF NOT EXISTS `ticket` (
+  `cod_ticket` int(11) NOT NULL AUTO_INCREMENT,
+  `Libellé` text NOT NULL,
+  PRIMARY KEY (`cod_ticket`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -159,151 +150,88 @@ CREATE TABLE `ticket` (
 -- Structure de la table `ticket_representation`
 --
 
-CREATE TABLE `ticket_representation` (
-  `id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `ticket_representation`;
+CREATE TABLE IF NOT EXISTS `ticket_representation` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `montant` int(11) NOT NULL,
   `nb_ticket` int(11) NOT NULL,
   `num_representation` int(11) NOT NULL,
-  `cod_ticket` int(11) NOT NULL
+  `cod_ticket` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `ticket_representation_representation_num_representation` (`num_representation`),
+  KEY `ticket_representation_ticket_cod_ticket` (`cod_ticket`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Index pour les tables déchargées
---
+-- --------------------------------------------------------
 
 --
--- Index pour la table `acteur`
---
-ALTER TABLE `acteur`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `artiste`
---
-ALTER TABLE `artiste`
-  ADD PRIMARY KEY (`num_arstiste`);
-
---
--- Index pour la table `artiste_representation`
---
-ALTER TABLE `artiste_representation`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `artiste_representation_representation_num_representation` (`num_representation`),
-  ADD KEY `artiste_representation_artiste_num_artiste` (`num_artiste`);
-
---
--- Index pour la table `piece`
---
-ALTER TABLE `piece`
-  ADD PRIMARY KEY (`num_piece`);
-
---
--- Index pour la table `piece_salle`
---
-ALTER TABLE `piece_salle`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `piece_salle_salle_num_salle` (`num_salle`),
-  ADD KEY `piece_salle_piece_num_piece` (`num_piece`);
-
---
--- Index pour la table `representation`
---
-ALTER TABLE `representation`
-  ADD PRIMARY KEY (`num_representation`),
-  ADD KEY `representation_salle_num_salle` (`num_salle`),
-  ADD KEY `representation_spectacle_num_spectacle` (`num_spectacle`);
-
---
--- Index pour la table `salle`
---
-ALTER TABLE `salle`
-  ADD PRIMARY KEY (`num_salle`),
-  ADD KEY `salle_representation_num_representation` (`num_representation`);
-
---
--- Index pour la table `spectacle`
---
-ALTER TABLE `spectacle`
-  ADD PRIMARY KEY (`num_spectacle`),
-  ADD KEY `spectacle_artiste_num_artiste` (`num_arstiste`);
-
---
--- Index pour la table `ticket`
---
-ALTER TABLE `ticket`
-  ADD PRIMARY KEY (`cod_ticket`);
-
---
--- Index pour la table `ticket_representation`
---
-ALTER TABLE `ticket_representation`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `ticket_representation_representation_num_representation` (`num_representation`),
-  ADD KEY `ticket_representation_ticket_cod_ticket` (`cod_ticket`);
-
---
--- AUTO_INCREMENT pour les tables déchargées
+-- Structure de la table `token`
 --
 
---
--- AUTO_INCREMENT pour la table `acteur`
---
-ALTER TABLE `acteur`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+DROP TABLE IF EXISTS `token`;
+CREATE TABLE IF NOT EXISTS `token` (
+  `user_id` int(5) NOT NULL AUTO_INCREMENT,
+  `type` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `token` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`user_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=23 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- AUTO_INCREMENT pour la table `artiste`
+-- Déchargement des données de la table `token`
 --
-ALTER TABLE `artiste`
-  MODIFY `num_arstiste` int(11) NOT NULL AUTO_INCREMENT;
+
+INSERT INTO `token` (`user_id`, `type`, `token`) VALUES
+(11, 'VALIDATION_COMPTE', '649219d73e0fd'),
+(12, 'VALIDATION_COMPTE', '64921b2c001ab'),
+(13, 'VALIDATION_COMPTE', '64921b9fb3b25'),
+(14, 'VALIDATION_COMPTE', '64921ca6e9ba9'),
+(15, 'VALIDATION_COMPTE', '64921d28bb520'),
+(17, 'VALIDATION_COMPTE', '64aed90008a7e'),
+(18, 'VALIDATION_COMPTE', '64af21e4b04cf'),
+(20, 'VALIDATION_COMPTE', '64af236844653'),
+(21, 'VALIDATION_COMPTE', '64af72ab1718f'),
+(22, 'VALIDATION_COMPTE', '64b5b9d1e7a04'),
+(16, 'VALIDATION_COMPTE', '64b5c66e454aa');
+
+-- --------------------------------------------------------
 
 --
--- AUTO_INCREMENT pour la table `artiste_representation`
+-- Structure de la table `user`
 --
-ALTER TABLE `artiste_representation`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+DROP TABLE IF EXISTS `user`;
+CREATE TABLE IF NOT EXISTS `user` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `nom` varchar(50) NOT NULL,
+  `prenoms` varchar(255) DEFAULT NULL,
+  `email` varchar(50) NOT NULL,
+  `username` varchar(50) NOT NULL,
+  `password` varchar(100) NOT NULL,
+  `avatar` varchar(255) DEFAULT NULL,
+  `profil` varchar(255) DEFAULT NULL,
+  `est_actif` int(11) NOT NULL DEFAULT '0',
+  `est_supprime` int(11) NOT NULL DEFAULT '0',
+  `cree_le` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `mis_a_jour_le` varchar(255) DEFAULT NULL,
+  `client` varchar(10) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb4;
 
 --
--- AUTO_INCREMENT pour la table `piece`
+-- Déchargement des données de la table `user`
 --
-ALTER TABLE `piece`
-  MODIFY `num_piece` int(11) NOT NULL AUTO_INCREMENT;
 
---
--- AUTO_INCREMENT pour la table `piece_salle`
---
-ALTER TABLE `piece_salle`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT pour la table `representation`
---
-ALTER TABLE `representation`
-  MODIFY `num_representation` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT pour la table `salle`
---
-ALTER TABLE `salle`
-  MODIFY `num_salle` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT pour la table `spectacle`
---
-ALTER TABLE `spectacle`
-  MODIFY `num_spectacle` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT pour la table `ticket`
---
-ALTER TABLE `ticket`
-  MODIFY `cod_ticket` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT pour la table `ticket_representation`
---
-ALTER TABLE `ticket_representation`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+INSERT INTO `user` (`id`, `nom`, `prenoms`, `email`, `username`, `password`, `avatar`, `profil`, `est_actif`, `est_supprime`, `cree_le`, `mis_a_jour_le`, `client`) VALUES
+(16, 'AGBEGNINOU', 'momo', 'madisonjdoss954@gmail.com', 'vegor', '6e498b8130f962b40326e3eb2253db93', NULL, NULL, 0, 0, '2023-07-08 09:55:15', NULL, 'client'),
+(17, 'fabio', 'biobio', 'fabio123@gmail.com', 'bio', '973c61d96a7f26714c1bfb02fb4df9fd', NULL, NULL, 0, 0, '2023-07-12 16:46:55', NULL, 'client'),
+(18, 'flora', 'maria', 'floramaria@gmail.com', 'malolo', '8163a2ea4dad02b7244794114720b227', NULL, NULL, 0, 0, '2023-07-12 21:57:56', NULL, 'client'),
+(19, 'flora', 'maria', 'floramaria@gmail.com', 'malolo', '8163a2ea4dad02b7244794114720b227', NULL, NULL, 0, 0, '2023-07-12 21:58:47', NULL, 'client'),
+(20, 'frejo', 'demain', 'demain@gmail.com', 'ojo', '11a106754fb6698e5a1f47f5ed0aaa06', NULL, NULL, 0, 0, '2023-07-12 22:04:24', NULL, 'client'),
+(21, 'moumouni', 'isis', 'isomoumouni@gmail.com', 'isis', 'c069821833532463d138e5bdde2e15c5', NULL, NULL, 0, 0, '2023-07-13 03:42:35', NULL, 'client'),
+(22, 'herman', 'herr', 'emaildemoi@gmail.com', 'herm', '25d55ad283aa400af464c76d713c07ad', NULL, NULL, 0, 0, '2023-07-17 21:59:45', NULL, 'client'),
+(23, 'madison', 'momo', 'madisonjdoss954@gmail.com', 'momo', '25f9e794323b453885f5181f1b624d0b', NULL, NULL, 0, 0, '2023-07-17 22:53:34', NULL, 'client'),
+(24, 'madison', 'momo', 'madisonjdoss954@gmail.com', 'momo', '25f9e794323b453885f5181f1b624d0b', NULL, NULL, 0, 0, '2023-07-18 13:12:14', NULL, 'client'),
+(25, 'modeste', 'momo', 'madisonjdoss954@gmail.com', 'momo', '25f9e794323b453885f5181f1b624d0b', NULL, NULL, 0, 0, '2023-07-18 13:12:52', NULL, 'client');
 
 --
 -- Contraintes pour les tables déchargées
