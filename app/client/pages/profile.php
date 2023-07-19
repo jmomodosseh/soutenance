@@ -461,38 +461,20 @@
 
                   <div class="row">
                     <div class="col-lg-3 col-md-4 label ">Nom complet</div>
-                    <div class="col-lg-9 col-md-8">Dosseh</div>
+                    <div class="col-lg-9 col-md-8"><?php echo $_SESSION["nom"]." ".$_SESSION["prenom"] ?></div>
                   </div>
 
                   <div class="row">
-                    <div class="col-lg-3 col-md-4 label">Compagnie</div>
-                    <div class="col-lg-9 col-md-8">Africa cargot express</div>
-                  </div>
-
-                  <div class="row">
-                    <div class="col-lg-3 col-md-4 label">Travail</div>
-                    <div class="col-lg-9 col-md-8">Web master</div>
-                  </div>
-
-                  <div class="row">
-                    <div class="col-lg-3 col-md-4 label">Pays</div>
-                    <div class="col-lg-9 col-md-8">Benin</div>
-                  </div>
-
-                  <div class="row">
-                    <div class="col-lg-3 col-md-4 label">Address</div>
-                    <div class="col-lg-9 col-md-8">COTONOU/BENIN</div>
-                  </div>
-
-                  <div class="row">
-                    <div class="col-lg-3 col-md-4 label">Numero de Téléphone</div>
-                    <div class="col-lg-9 col-md-8">229 99337363</div>
+                    <div class="col-lg-3 col-md-4 label">Nom d'utilisateur</div>
+                    <div class="col-lg-9 col-md-8"><?php echo $_SESSION["username"]?></div>
                   </div>
 
                   <div class="row">
                     <div class="col-lg-3 col-md-4 label">Email</div>
-                    <div class="col-lg-9 col-md-8">madisonjdoss954@gmail.com</div>
+                    <div class="col-lg-9 col-md-8"><?php echo $_SESSION["email"]?></div>
                   </div>
+
+                  
 
                 </div>
 
