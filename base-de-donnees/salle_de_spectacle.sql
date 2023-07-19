@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : mar. 18 juil. 2023 à 22:06
+-- Généré le : mer. 19 juil. 2023 à 12:03
 -- Version du serveur : 5.7.36
 -- Version de PHP : 7.4.26
 
@@ -170,28 +170,24 @@ CREATE TABLE IF NOT EXISTS `ticket_representation` (
 
 DROP TABLE IF EXISTS `token`;
 CREATE TABLE IF NOT EXISTS `token` (
-  `user_id` int(5) NOT NULL AUTO_INCREMENT,
-  `type` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `token` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
-  PRIMARY KEY (`user_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=23 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) DEFAULT NULL,
+  `type` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `token` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `est_actif` int(11) NOT NULL DEFAULT '1',
+  `est_supprime` int(11) NOT NULL DEFAULT '0',
+  `cree_le` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `mis_a_jour_le` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `token_user_id` (`user_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Déchargement des données de la table `token`
 --
 
-INSERT INTO `token` (`user_id`, `type`, `token`) VALUES
-(11, 'VALIDATION_COMPTE', '649219d73e0fd'),
-(12, 'VALIDATION_COMPTE', '64921b2c001ab'),
-(13, 'VALIDATION_COMPTE', '64921b9fb3b25'),
-(14, 'VALIDATION_COMPTE', '64921ca6e9ba9'),
-(15, 'VALIDATION_COMPTE', '64921d28bb520'),
-(17, 'VALIDATION_COMPTE', '64aed90008a7e'),
-(18, 'VALIDATION_COMPTE', '64af21e4b04cf'),
-(20, 'VALIDATION_COMPTE', '64af236844653'),
-(21, 'VALIDATION_COMPTE', '64af72ab1718f'),
-(22, 'VALIDATION_COMPTE', '64b5b9d1e7a04'),
-(16, 'VALIDATION_COMPTE', '64b5c66e454aa');
+INSERT INTO `token` (`id`, `user_id`, `type`, `token`, `est_actif`, `est_supprime`, `cree_le`, `mis_a_jour_le`) VALUES
+(23, 30, 'VALIDATION_COMPTE', '64b7cea5d7d2c', 1, 0, '2023-07-19 11:53:09', NULL);
 
 -- --------------------------------------------------------
 
@@ -216,7 +212,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   `client` varchar(10) NOT NULL,
   `image` blob,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8mb4;
 
 --
 -- Déchargement des données de la table `user`
@@ -232,7 +228,12 @@ INSERT INTO `user` (`id`, `nom`, `prenoms`, `email`, `username`, `password`, `av
 (22, 'herman', 'herr', 'emaildemoi@gmail.comertyy', 'herm', '25d55ad283aa400af464c76d713c07ad', NULL, NULL, 0, 0, '2023-07-17 21:59:45', NULL, 'client', NULL),
 (23, 'madison', 'momo', 'madisonjdoss954@gmail.com', 'momo', '25f9e794323b453885f5181f1b624d0b', NULL, NULL, 0, 0, '2023-07-17 22:53:34', NULL, 'client', NULL),
 (24, 'madison', 'momo', 'madisonjdoss954@gmail.com', 'momo', '25f9e794323b453885f5181f1b624d0b', NULL, NULL, 0, 0, '2023-07-18 13:12:14', NULL, 'client', NULL),
-(25, 'modeste', 'momo', 'madisonjdoss954@gmail.com', 'momo', '25f9e794323b453885f5181f1b624d0b', NULL, NULL, 0, 0, '2023-07-18 13:12:52', NULL, 'client', NULL);
+(25, 'modeste', 'momo', 'madisonjdoss954@gmail.com', 'momo', '25f9e794323b453885f5181f1b624d0b', NULL, NULL, 0, 0, '2023-07-18 13:12:52', NULL, 'client', NULL),
+(26, 'romarish', 'pambi', 'madisonjdoss954@gmail.combadio', 'badio', '432f45b44c432414d2f97df0e5743818', NULL, NULL, 0, 0, '2023-07-19 11:02:07', NULL, 'client', NULL),
+(27, 'AGBEGNINOU', 'jean modeste', 'madisonjdoss954@gmail.com', 'madison', '432f45b44c432414d2f97df0e5743818', NULL, NULL, 0, 0, '2023-07-19 11:10:38', NULL, 'client', NULL),
+(28, 'AGBEGNINOU', 'jean modeste', 'madisonjdoss954@gmail.com', 'madison', '432f45b44c432414d2f97df0e5743818', NULL, NULL, 0, 0, '2023-07-19 11:10:54', NULL, 'client', NULL),
+(29, 'AGBEGNINOU', 'jean modeste', 'madisonjdoss954@gmail.com', 'madison', '432f45b44c432414d2f97df0e5743818', NULL, NULL, 0, 0, '2023-07-19 11:12:43', NULL, 'client', NULL),
+(30, 'AGBEGNINOU', 'momo', 'jeanmodestekyrieirving@gmail.com', 'mop', '25f9e794323b453885f5181f1b624d0b', NULL, NULL, 0, 0, '2023-07-19 11:53:09', NULL, 'client', NULL);
 
 --
 -- Contraintes pour les tables déchargées
@@ -277,6 +278,12 @@ ALTER TABLE `spectacle`
 ALTER TABLE `ticket_representation`
   ADD CONSTRAINT `ticket_representation_representation_num_representation` FOREIGN KEY (`num_representation`) REFERENCES `representation` (`num_representation`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `ticket_representation_ticket_cod_ticket` FOREIGN KEY (`cod_ticket`) REFERENCES `ticket` (`cod_ticket`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Contraintes pour la table `token`
+--
+ALTER TABLE `token`
+  ADD CONSTRAINT `token_user_id` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
