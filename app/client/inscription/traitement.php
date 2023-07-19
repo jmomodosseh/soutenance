@@ -112,7 +112,8 @@ if (empty($erreurs)) {
         $id_utilisateur = select_user_id($donnees['email'])[0]['id'];
 
         if (insertion_token($id_utilisateur, 'VALIDATION_COMPTE', $_token)){
-            
+            echo "ca marche";
+            die();
             $_SESSION['validation_compte']=[];
             $_SESSION['validation_compte']['id_utilisateur']=$id_utilisateur;
             $_SESSION['validation_compte']['token']=recuperer_token($id_utilisateur)[0]['token'];
